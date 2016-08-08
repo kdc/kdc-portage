@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,14 +12,11 @@ SRC_URI="
 	amd64? (
 		https://dl.genymotion.com/releases/${P}/${P}-linux_x64.bin
 	)
-	x86? (
-		http://files2.genymotion.com/${PN}/${P}/${P}-linux_x86.bin
-	)
 "
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
