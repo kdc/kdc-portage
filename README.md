@@ -1,2 +1,1 @@
-# portage
-Gentoo local ebuiilds
+# Gentoo local ebuilds
