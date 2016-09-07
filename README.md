@@ -18,3 +18,5 @@ When using one of the ebuilds you need to create a manifest with :
 ```bash
 ebuild /usr/local/portage/category/package-name/.ebuild digest
 ```
+#### patches 
+folder is for /etc/portage/patches/
