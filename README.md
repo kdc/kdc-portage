@@ -1,5 +1,15 @@
 # Gentoo local ebuilds
 
+#### package usage
+To be able to use these ebuild, you will need to add them into your keywords file :
+```bash
+/etc/portage/package.keywords/general :
+...
+x11-wm/dwm **
+net-misc/mac-telnet **
+...
+```
+
 ##### /etc/portage/make.conf
 ```bash
 PORTDIR_OVERLAY="/usr/local/portage"
