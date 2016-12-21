@@ -10,7 +10,7 @@ HOMEPAGE="https://www.genymotion.com"
 
 SRC_URI="
 	amd64? (
-		https://dl.genymotion.com/releases/${P}/${P}-linux_x64.bin
+		https://dl.genymotion.com/releases/${P}/${P}_x64.bin
 	)
 "
 
