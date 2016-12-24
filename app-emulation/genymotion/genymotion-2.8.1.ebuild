@@ -28,9 +28,9 @@ src_install() {
 	mkdir "${D}/opt"
 
 	if use amd64; then
-		yes | bash ${P}-linux_x64.bin -d "${D}/opt"
+		yes | bash ${P}-_x64.bin -d "${D}/opt"
 	elif use x86; then
-		yes | bash ${P}-linux_x86.bin -d "${D}/opt"
+		yes | bash ${P}-_x86.bin -d "${D}/opt"
 	fi
 
 	mkdir -p "${D}/usr/bin"
