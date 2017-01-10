@@ -11,12 +11,7 @@ auto-sync = Yes
 ```
 
 #### package usage
-To be able to use these ebuild, you will need to add them into your keywords file :
-```bash
-/etc/portage/package.keywords/general :
-...
-net-misc/mac-telnet **
-...
-```
+To be able to use these ebuild, you will need to add them into your packages.keywords file/folder
+
 #### ebuild patches 
 patches folder is for /etc/portage/patches/
