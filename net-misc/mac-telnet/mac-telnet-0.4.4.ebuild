@@ -25,6 +25,11 @@ src_unpack() {
     cd "${S}"
 }
 
+src_prepare() {
+        default
+        ./autogen.sh || die
+}
+
 src_install() {
 	exeinto opt/MAC-Telnet
 	doexe mndp
