@@ -32,10 +32,10 @@ src_prepare() {
 
 src_install() {
 	exeinto opt/MAC-Telnet
-	doexe mndp
-	doexe mactelnet
-	doexe macping
-	doexe mactelnetd
+	doexe src/mndp
+	doexe src/mactelnet
+	doexe src/macping
+	doexe src/mactelnetd
 	dosym /opt/MAC-Telnet/mndp /opt/bin/mndp
 	dosym /opt/MAC-Telnet/mactelnet /opt/bin/mactelnet
 	dosym /opt/MAC-Telnet/macping /opt/bin/macping
