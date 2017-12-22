@@ -8,8 +8,8 @@ inherit vcs-snapshot toolchain-funcs eutils
 
 DESCRIPTION="Analog clock in ncurses"
 HOMEPAGE="https://github.com/xorg62/tty-clock"
-SRC_URI="https://github.com/xorg62/tty-clock/archive/master.zip -> ${P}.zip"
-S="${WORKDIR}/tty-clock-master"
+SRC_URI="https://github.com/xorg62/tty-clock/archive/v2.3.tar.gz"
+#S="${WORKDIR}/tty-clock-master"
 
 
 LICENSE="BSD"
