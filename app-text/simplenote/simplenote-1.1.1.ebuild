@@ -43,9 +43,10 @@ DEPEND="app-crypt/libsecret:0
         x11-libs/pango:0"
 RDEPEND="${DEPEND}"
 
+MY_PN="simplenote"
 S="${WORKDIR}/Simplenote-linux-x64"
 
 src_install() {
-        insinto /opt/${MY_PN}
-        dosym /opt/${MY_PN}/${MY_PN} usr/bin/${MY_PN}
+        insinto /opt/${PN}
+        dosym /opt/${PN}/${MY_PN} usr/bin/${PN}
 }
