@@ -47,7 +47,5 @@ S="${WORKDIR}/Simplenote-linux-x64"
 
 src_install() {
         insinto /opt/${MY_PN}
-        doins -r usr/lib/${MY_PN}/.
-        fperms +x /opt/${MY_PN}/${MY_PN}
-        dosym /opt/${MY_PN}/${MY_PN} usr/bin/${MY_PN}
+        dosym /opt/${MY_PN}/${MY_PN} /usr/bin/${MY_PN}
 }
