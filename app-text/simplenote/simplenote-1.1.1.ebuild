@@ -49,5 +49,5 @@ S="${WORKDIR}/Simplenote-linux-x64"
 src_install() {
 		dodir /opt/${PN}
 		cp -rT "${S}/" "${D}/opt/simplenote/" || die "install failed!"
-        dosym /opt/${PN}/${MY_PN} usr/bin/${PN}
+        dosym "${D}/opt/simplenote/Simplenote" usr/bin/${PN}
 }
