@@ -27,12 +27,10 @@ DEPEND=">=virtual/jdk-1.8.0
 		x11-libs/gtk+:2"
 RDEPEND="${DEPEND}"
 
-INSTALL_DIR="/opt"
 S="${WORKDIR}/${MY_PN}"
 
 src_install() {
-	insinto "${INSTALL_DIR}"
-	doins -r *
-	fperms +x "${INSTALL_DIR}/${MY_PN}/${MY_PN}"
-	dosym "${INSTALL_DIR}/${MY_PN}/${MY_PN}" "/usr/bin/${MY_PN}"
+    dodir /opt/${PN}
+    cp -rT "${S}/" "${D}/opt/ApacheDirectoryStudio/" || die "install failed!"
+    dosym "${D}/opt/ApacheDirectoryStudio/ApacheDirectoryStudio" usr/bin/${PN}
 }
