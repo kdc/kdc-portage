@@ -28,20 +28,11 @@ DEPEND=">=virtual/jdk-1.8.0
 RDEPEND="${DEPEND}"
 
 INSTALL_DIR="/opt"
-S="${WORKDIR}/${MY_PN}-linux-${MY_ARCH}-${MY_PV}"
+S="${WORKDIR}/${MY_PN}"
 
 src_install() {
-
 	insinto "${INSTALL_DIR}"
-
-	newicon "${MY_PN}/features/org.apache.directory.studio.schemaeditor.feature_${MY_PV}-M${MY_PKGM}/studio.png" "${MY_PN}.png"
-	#newicon "${MY_PN}/icon.xpm" "${MY_PN}.xpm"
-
-	make_desktop_entry "${MY_PN}" "Apache Directory Studio" "${MY_PN}" "System"
-
 	doins -r *
-
 	fperms +x "${INSTALL_DIR}/${MY_PN}/${MY_PN}"
-
 	dosym "${INSTALL_DIR}/${MY_PN}/${MY_PN}" "/usr/bin/${MY_PN}"
 }
