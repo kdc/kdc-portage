@@ -9,8 +9,8 @@ MY_PV=$(replace_version_separator 3 '.v')
 MY_PN="${PN}"
 MY_PKGM=13
 
-DESCRIPTION=""
-HOMEPAGE="http://directory.apache.org/studio/"
+DESCRIPTION="Apache Directory Studio is an universal LDAP directory tool"
+HOMEPAGE="https://directory.apache.org/studio"
 SRC_URI="amd64? (
 		"https://www.apache.org/dist/directory/studio/${MY_PV}-M${MY_PKGM}/${MY_PN}-${MY_PV}-M${MY_PKGM}-linux.gtk.x86_64.tar.gz"
 	)
