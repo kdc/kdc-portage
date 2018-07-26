@@ -18,3 +18,10 @@ RDEPEND="${DEPEND}
 
 MY_PN="${PN/-bin}"
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+src_install() {
+	dobin bin/pandoc
+	dobin bin/pandoc-citeproc
+	doman share/man/man1/pandoc.1.gz
+	doman share/man/man1/pandoc-citeproc.1.gz
+}
