@@ -17,3 +17,4 @@ RDEPEND="${DEPEND}
 		!app-text/pandoc"
 
 MY_PN="${PN/-bin}"
+S="${WORKDIR}"
