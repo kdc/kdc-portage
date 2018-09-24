@@ -5,7 +5,9 @@ EAPI=6
 
 DESCRIPTION="QEMU Init OpenRC"
 HOMEPAGE="https://github.com/SpiderX/qio"
-SRC_URI="https://github.com/SpiderX/qio/archive/0.2.tar.gz"
+SRC_URI="https://github.com/SpiderX/qio/archive/${PV}.tar.gz"
+S="${WORKDIR}/${PV}"
+
 
 LICENSE="MIT"
 SLOT=0
