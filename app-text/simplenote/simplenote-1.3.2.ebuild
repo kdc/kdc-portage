@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="The simplest way to keep notes"
 HOMEPAGE="https://simplenote.com https://github.com/Automattic/simplenote-electron"
-SRC_URI="https://github.com/Automattic/simplenote-electron/releases/download/v${PV}/Simplenote-linux-${PV}.tar.gz"
+SRC_URI="https://github.com/Automattic/simplenote-electron/releases/download/v${PV}/Simplenote-linux-${PV}-x64.tar.gz"
 
 LICENSE="GPLv2"
 SLOT="0"

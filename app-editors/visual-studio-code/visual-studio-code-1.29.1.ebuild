@@ -7,7 +7,7 @@ EAPI=6
 inherit eutils pax-utils
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
-HOMEPAGE="https://code.visualstudio.com"
+HOMEPAGE="https://code.visualstudio.com https://code.visualstudio.com/updates"
 BASE_URI="https://vscode-update.azurewebsites.net/${PV}"
 SRC_URI="
 	x86? ( ${BASE_URI}/linux-ia32/stable ->  ${P}-x86.tar.gz )
