@@ -18,5 +18,5 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${P}-linux-amd64"
 
 src_install(){
-	doexe minishift
+	dobin minishift
 }
