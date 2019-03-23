@@ -8,7 +8,7 @@ inherit rpm pax-utils systemd
 MY_P="Nessus-${PV}-es7"
 
 DESCRIPTION="A remote security scanner for Linux"
-HOMEPAGE="https://www.tenable.com/"
+HOMEPAGE="https://www.tenable.com"
 SRC_URI="${MY_P}.x86_64.rpm"
 
 LICENSE="GPL-2 Nessus-EULA"
@@ -30,7 +30,7 @@ QA_PREBUILT="opt/nessus/bin/nasl
 S="${WORKDIR}"
 
 pkg_nofetch() {
-	einfo "Please download ${A} from ${HOMEPAGE}/download"
+	einfo "Please download ${A} from ${HOMEPAGE}/downloads/nessus"
 	einfo "The archive should then be placed into ${DISTDIR}."
 }
 
