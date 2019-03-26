@@ -18,13 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND=""
-DEPEND="${REDEPEND}
-dev-python/setuptools[${PYTHON_USEDEP}]
-test? (
-dev-python/nose[${PYTHON_USEDEP}]
-dev-python/pytest[${PYTHON_USEDEP}]
-)
+RDEPEND="
 dev-python/requests[${PYTHON_USEDEP}]
 dev-python/click[${PYTHON_USEDEP}]
 dev-python/click-plugins[${PYTHON_USEDEP}]
@@ -32,6 +26,12 @@ dev-python/colorama[${PYTHON_USEDEP}]
 dev-python/requests[${PYTHON_USEDEP}]
 dev-python/xlsxwriter[${PYTHON_USEDEP}]
 "
+DEPEND="${REDEPEND}
+dev-python/setuptools[${PYTHON_USEDEP}]
+test? (
+dev-python/nose[${PYTHON_USEDEP}]
+dev-python/pytest[${PYTHON_USEDEP}]
+)"
 
 python_test() {
 	nosetests --verbose || die
