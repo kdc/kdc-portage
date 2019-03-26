@@ -8,8 +8,8 @@ inherit distutils-r1
 
 DESCRIPTION="Python library and command-line utility for Shodan (https://developer.shodan.io)"
 HOMEPAGE="
-		https://developer.shodan.io
-		https://pypi.org/project/shodan
+https://developer.shodan.io
+https://pypi.org/project/shodan
 "
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -20,17 +20,17 @@ IUSE="test"
 
 RDEPEND=""
 DEPEND="${REDEPEND}
-		dev-python/setuptools[${PYTHON_USEDEP}]
-		test? (
-		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/pytest[${PYTHON_USEDEP}]
-		)
-		dev-python/requests[${PYTHON_USEDEP}]
-		dev-python/click[${PYTHON_USEDEP}]
-		dev-python/click-plugins[${PYTHON_USEDEP}]
-		dev-python/colorama[${PYTHON_USEDEP}]
-		dev-python/requests[${PYTHON_USEDEP}]
-		dev-python/xlsxwriter[${PYTHON_USEDEP}]
+dev-python/setuptools[${PYTHON_USEDEP}]
+test? (
+dev-python/nose[${PYTHON_USEDEP}]
+dev-python/pytest[${PYTHON_USEDEP}]
+)
+dev-python/requests[${PYTHON_USEDEP}]
+dev-python/click[${PYTHON_USEDEP}]
+dev-python/click-plugins[${PYTHON_USEDEP}]
+dev-python/colorama[${PYTHON_USEDEP}]
+dev-python/requests[${PYTHON_USEDEP}]
+dev-python/xlsxwriter[${PYTHON_USEDEP}]
 "
 
 python_test() {
