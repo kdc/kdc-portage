@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-python/requests[${PYTHON_USEDEP}]
-		dev-python/simplejson[${PYTHON_USEDEP}]
 		dev-python/click[${PYTHON_USEDEP}]
 		dev-python/click-plugins[${PYTHON_USEDEP}]
 		dev-python/colorama[${PYTHON_USEDEP}]
