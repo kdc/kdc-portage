@@ -10,7 +10,7 @@ https://typora.io/#linux
 https://typora.io/dev_release.html"
 SRC_URI="https://typora.io/linux/Typora-linux-x64.tar.gz"
 
-LICENSE="EULA"
+LICENSE=""
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -31,6 +31,4 @@ src_install() {
 	doins -r ${S} 
 	dosym /opt/Typora-linux-x64/Typora /usr/bin/typora
 	fperms 0755 /opt/Typora-linux-x64/Typora
-	insinto /usr/share/applications/
-	doins ${FILESDIR}/Typora.desktop
 }
