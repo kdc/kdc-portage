@@ -7,7 +7,7 @@ DESCRIPTION="Conversion between markup formats"
 HOMEPAGE="http://pandoc.org https://github.com/jgm/pandoc/releases/"
 SRC_URI="https://github.com/jgm/pandoc/releases/download/${PV}/pandoc-${PV}-linux.tar.gz"
 
-LICENSE="GPLv2"
+LICENSE=""
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
