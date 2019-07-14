@@ -8,7 +8,9 @@ inherit rpm pax-utils systemd
 MY_P="Nessus-${PV}-es7"
 
 DESCRIPTION="A remote security scanner for Linux"
-HOMEPAGE="https://www.tenable.com"
+HOMEPAGE="
+https://www.tenable.com
+https://www.tenable.com/downloads/nessus"
 SRC_URI="${MY_P}.x86_64.rpm"
 
 LICENSE="GPL-2 Nessus-EULA"
