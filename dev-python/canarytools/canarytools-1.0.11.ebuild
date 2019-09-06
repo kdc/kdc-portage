@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND=""
+RDEPEND="dev-python/pytz[${PYTHON_USEDEP}]"
 DEPEND="${REDEPEND}
 dev-python/setuptools[${PYTHON_USEDEP}]
 test? (
