@@ -7,7 +7,9 @@ EAPI=6
 inherit eutils 
 
 DESCRIPTION="Minishift helps you run a single-nod OpenShift Cluster within a VM"
-HOMEPAGE="https://github.com/minishift/minishift"
+HOMEPAGE="
+https://github.com/minishift/minishift
+https://github.com/minishift/minishift/releases"
 SRC_URI="https://github.com/minishift/minishift/releases/download/v${PV}/${P}-linux-amd64.tgz"
 LICENSE="Apache-2.0"
 SLOT="0"

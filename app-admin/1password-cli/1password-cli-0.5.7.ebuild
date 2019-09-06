@@ -4,8 +4,10 @@
 EAPI=6
 
 DESCRIPTION="1Password command-line tool"
-HOMEPAGE="https://1password.com/"
-SRC_URI="https://cache.agilebits.com/dist/1P/op/pkg/v0.5.4/op_linux_amd64_v0.5.4.zip"
+HOMEPAGE="
+https://1password.com/
+https://app-updates.agilebits.com/product_history/CLI"
+SRC_URI="https://cache.agilebits.com/dist/1P/op/pkg/v${PV}/op_linux_amd64_v${PV}.zip"
 
 LICENSE=""
 SLOT="0"
