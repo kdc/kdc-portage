@@ -26,5 +26,5 @@ S="${WORKDIR}"
 
 src_install() {
 	insinto /opt/${MY_PN}
-	doins -r ${S}
+	doins -r ${S}/toffies
 }
