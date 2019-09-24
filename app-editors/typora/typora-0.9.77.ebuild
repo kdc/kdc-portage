@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit unpacker
+inherit eutils unpacker
 
 DESCRIPTION="markdown editor"
 HOMEPAGE="
@@ -12,8 +12,6 @@ https://typora.io/#linux
 https://typora.io/windows/dev_release.html
 https://support.typora.io/"
 SRC_URI="https://typora.io/linux/${PN}_${PV}_amd64.deb"
-
-RESTRICT="primaryuri mirror"
 
 LICENSE=""
 SLOT="0"
@@ -24,14 +22,21 @@ DEPEND="app-text/pandoc-bin"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-src_unpack() {
-	default
-	S=${WORKDIR}
-}
+S="${WORKDIR}"
 
 src_install() {
-	insinto /opt/
-	doins -r ${S} 
-	dosym /opt/Typora-linux-x64/Typora /usr/bin/typora
-	fperms 0755 /opt/Typora-linux-x64/Typora
+	insinto /
+	doins -r usr
+
+	fperms 0755 /usr/share/typora/Typora
+
+	dodir /usr/share/applications
+	insinto /usr/share/applications
+	doins ${S}/usr/share/applications/typora.desktop
+
+	dodir /usr/share/icons
+	insinto /usr/share/icons
+	doins -r ${S}/usr/share/icons/hicolor
+
+	dosym ../share/typora/Typora /usr/bin/typora
 }
