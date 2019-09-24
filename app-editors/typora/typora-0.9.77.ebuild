@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit unpacker
+
 DESCRIPTION="markdown editor"
 HOMEPAGE="
 https://typora.io
