@@ -26,5 +26,7 @@ S="${WORKDIR}"
 
 src_install() {
 	insinto /opt/${MY_PN}
-	doins -r ${S}/toffies
+	doins -r ${S}/usr/share/typora
+	dosym /opt/typora/Typora /usr/bin/typora
+	fperms 0755 /opt/typora/Typora
 }
