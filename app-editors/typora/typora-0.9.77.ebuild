@@ -25,28 +25,8 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-	insinto /
-	doins -r usr
-
-	fperms 0755 /usr/share/typora/Typora
-
-	dodir /usr/share/applications
-	insinto /usr/share/applications
-	doins ${S}/usr/share/applications/typora.desktop
-
-	dodir /usr/share/icons
-	insinto /usr/share/icons
-	doins -r ${S}/usr/share/icons/hicolor
-
-	dosym ../share/typora/Typora /usr/bin/typora
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
+	insinto /opt/${MY_PN}
+	doins -r ${S}
+	dosym /opt/Typora-linux-x64/Typora /usr/bin/typora
+	fperms 0755 /opt/Typora-linux-x64/Typora
 }
