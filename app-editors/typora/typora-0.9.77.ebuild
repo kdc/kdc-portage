@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils unpacker
+inherit eutils xdg-utils unpacker
 
 DESCRIPTION="markdown editor"
 HOMEPAGE="
@@ -39,4 +39,16 @@ src_install() {
 	doins -r ${S}/usr/share/icons/hicolor
 
 	dosym ../share/typora/Typora /usr/bin/typora
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
+	gnome2_icon_cache_update
 }
