@@ -11,7 +11,7 @@ https://typora.io/dev_release.html
 https://support.typora.io/"
 SRC_URI="https://typora.io/linux/Typora-linux-x64.tar.gz"
 
-RESTRICT="primaryuri"
+RESTRICT="primaryuri mirror"
 
 LICENSE=""
 SLOT="0"
