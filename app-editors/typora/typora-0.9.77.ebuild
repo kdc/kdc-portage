@@ -25,10 +25,8 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_unpack() {
-	if [ "${A}" != "" ]; then
-		unpack ${A}
-	fi
-	S=${WORKDIR}/Typora-linux-x64/
+	default
+	S=${WORKDIR}
 }
 
 src_install() {
