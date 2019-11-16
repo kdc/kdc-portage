@@ -10,6 +10,7 @@ DESCRIPTION="Python library and command-line utility for Shodan (https://develop
 HOMEPAGE="
 https://developer.shodan.io
 https://pypi.org/project/shodan
+https://github.com/achillean/shodan-python/releases
 "
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
