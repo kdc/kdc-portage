@@ -70,15 +70,3 @@ src_install() {
 
 	fperms +x /usr/share/${MY_PN}/${MY_PN} /usr/bin/${MY_PN}
 }
-
-pkg_preinst() {
-	gnome2_icon_savelist
-}
-
-pkg_postinst() {
-	gnome2_icon_cache_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-}
