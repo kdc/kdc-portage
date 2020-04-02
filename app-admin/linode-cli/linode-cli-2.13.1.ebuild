@@ -7,7 +7,8 @@ PYTHON_COMPAT=( python3_{4,5,6} )
 inherit distutils-r1 versionator
 
 DESCRIPTION="CLI for the Linode API v4"
-HOMEPAGE="https://www.linode.com/docs/platform/linode-cli/"
+HOMEPAGE="https://www.linode.com/docs/platform/linode-cli/
+https://github.com/linode/linode-cli/releases"
 MY_PV="${PV/_beta/b}"
 MY_P="${PN}-${MY_PV}"
 SRC_URI="https://github.com/linode/${PN}/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
