@@ -5,7 +5,7 @@
 inherit eutils
 
 DESCRIPTION="Cisco Discovery Protocol Reporter"
-HOMEPAGE="http://cdpr.sourceforge.net/"
+HOMEPAGE="https://cdpr.sourceforge.net/"
 SRC_URI="https://sourceforge.net/projects/${PN}/files/${PN}/${PVR}/${P}.tgz"
 
 LICENSE="GPL-2"
