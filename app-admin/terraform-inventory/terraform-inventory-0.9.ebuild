@@ -24,8 +24,11 @@ app-admin/terraform
 app-admin/ansible"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
+src_prepare(){
 	default
+}
+
+src_unpack() {
 	golang-single_src_unpack
 }
 
