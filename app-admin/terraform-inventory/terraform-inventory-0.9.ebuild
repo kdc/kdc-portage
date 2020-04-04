@@ -25,4 +25,4 @@ GOLANG_PKG_DEPENDENCIES=(
 	"github.com/stretchr/testify"
 )
 
-inherit golang-build
+inherit golang-base
