@@ -29,6 +29,8 @@ RESTRICT="test"
 
 src_prepare() {
 	default
+	cd src/${EGO_PN} || die
+	go get || die
 }
 
 src_compile() {
@@ -38,7 +40,6 @@ src_compile() {
 	XC_ARCH=$(go env GOARCH) \
 	XC_OS=$(go env GOOS) \
 	XC_OSARCH=$(go env GOOS)/$(go env GOARCH) \
-	go get || die
 	GOCACHE="${T}/go-cache" go build -work -o "bin/${PN}" ./ || die
 }
 
