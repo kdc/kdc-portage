@@ -25,6 +25,7 @@ app-admin/ansible"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
+	default
 	golang-single_src_unpack
 }
 
