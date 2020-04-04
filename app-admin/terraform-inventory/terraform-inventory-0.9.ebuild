@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit golang-base golang-vcs-snapshot
+inherit golang-vcs-snapshot go-module
 
 DESCRIPTION="Terraform State → Ansible Dynamic Inventory"
 HOMEPAGE="https://github.com/adammck/terraform-inventory"
@@ -28,14 +28,9 @@ src_prepare() {
 }
 
 src_compile() {
-	mkdir bin || die
-	export GOBIN=${S}/bin GOPATH=${S}
-	cd src/${EGO_PN} || die
-	XC_ARCH=$(go env GOARCH) \
-	XC_OS=$(go env GOOS) \
-	XC_OSARCH=$(go env GOOS)/$(go env GOARCH) \
-	go get || die
-	GOCACHE="${T}/go-cache" go build -work -o "bin/${PN}" ./ || die
+	go build \
+		-mod=vendor \
+		-work -o "bin/${PN}" ./ || die
 }
 
 src_install() {
