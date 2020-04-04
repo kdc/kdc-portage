@@ -27,14 +27,6 @@ app-admin/terraform
 app-admin/ansible"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	default
-}
-
-src_compile() {
-	GOPATH="${S}" go install -v -work -x ${EGO_BUILD_FLAGS} "${EGO_PN}"/${PN} || die
-}
-
 src_install() {
 	dodoc src/${EGO_PN}/README.md
 	dobin bin/${PN}
