@@ -3,17 +3,19 @@
 
 EAPI=7
 
-inherit golang-build golang-vcs-snapshot
+EGO_VENDOR=(
+"github.com/adammck/venv 8a9c907a37d36a8f34fa1c5b81aaf80c2554a306"
+"github.com/blang/vfs 2c3e2278e174a74f31ff8bf6f47b43ecb358a870")
 
-EGO_VENDOR=("
-github.com/adammck/venv
-github.com/blang/vfs")
+inherit golang-build golang-vcs-snapshot
 
 DESCRIPTION="Terraform State → Ansible Dynamic Inventory"
 HOMEPAGE="https://github.com/adammck/terraform-inventory"
 EGO_PN="github.com/adammck/${PN}"
-SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-${EGO_VENDOR_URI}"
+ARCHIVE_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+SRC_URI="${ARCHIVE_URI}
+	${EGO_VENDOR_URI}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -25,12 +27,8 @@ app-admin/terraform
 app-admin/ansible"
 RDEPEND="${DEPEND}"
 
-RESTRICT="test"
-
 src_prepare() {
 	default
-	cd src/${EGO_PN} || die
-	go get || die
 }
 
 src_compile() {
@@ -40,7 +38,7 @@ src_compile() {
 	XC_ARCH=$(go env GOARCH) \
 	XC_OS=$(go env GOOS) \
 	XC_OSARCH=$(go env GOOS)/$(go env GOARCH) \
-	GOCACHE="${T}/go-cache" go build -work -o "bin/${PN}" ./ || die
+	go build -v -o bin/${PN} || die
 }
 
 src_install() {
