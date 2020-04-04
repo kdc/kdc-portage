@@ -3,11 +3,13 @@
 
 EAPI=7
 
+inherit golang-base
+
 GOLANG_PKG_HAVE_TEST=1
 
 DESCRIPTION="Terraform State → Ansible Dynamic Inventory"
 HOMEPAGE="https://github.com/adammck/terraform-inventory"
-SRC_URI="https://github.com/adammck/terraform-inventory/archive/v${PV}.tar.gz"
+EGO_PN=="https://github.com/adammck/terraform-inventory/archive/v${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -24,5 +26,3 @@ GOLANG_PKG_DEPENDENCIES=(
 	"github.com/blang/vfs"
 	"github.com/stretchr/testify"
 )
-
-inherit golang-base
