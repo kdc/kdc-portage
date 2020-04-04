@@ -21,6 +21,8 @@ app-admin/terraform
 app-admin/ansible"
 RDEPEND="${DEPEND}"
 
+RESTRICT="test"
+
 src_prepare() {
 	default
 }
@@ -32,7 +34,7 @@ src_compile() {
 	XC_ARCH=$(go env GOARCH) \
 	XC_OS=$(go env GOOS) \
 	XC_OSARCH=$(go env GOOS)/$(go env GOARCH) \
-	emake
+	GOCACHE="${T}/go-cache" go build -work -o "bin/${PN}" ./ || die
 }
 
 src_install() {
