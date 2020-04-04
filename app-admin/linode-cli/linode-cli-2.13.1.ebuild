@@ -19,11 +19,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
- dev-python/colorclass[${PYTHON_USEDEP}]
- dev-python/pyyaml[${PYTHON_USEDEP}]
- dev-python/requests[${PYTHON_USEDEP}]
- dev-python/terminaltables[${PYTHON_USEDEP}]
- virtual/python-enum34[${PYTHON_USEDEP}]
+dev-python/colorclass[${PYTHON_USEDEP}]
+dev-python/pyyaml[${PYTHON_USEDEP}]
+dev-python/requests[${PYTHON_USEDEP}]
+dev-python/terminaltables[${PYTHON_USEDEP}]
+virtual/python-enum34[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
 
