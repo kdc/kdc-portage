@@ -3,13 +3,16 @@
 
 EAPI=7
 
-inherit golang-vcs-snapshot go-module
+GOLANG_PKG_HAVE_TEST=1
 
 DESCRIPTION="Terraform State → Ansible Dynamic Inventory"
 HOMEPAGE="https://github.com/adammck/terraform-inventory"
-EGO_PN="github.com/adammck/${PN}"
-SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/adammck/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+GOLANG_PKG_DEPENDENCIES=(
+	"github.com/adammck/venv"
+	"github.com/blang/vfs:2c3e227"
+)
 
 LICENSE="MIT"
 SLOT="0"
@@ -21,19 +24,10 @@ app-admin/terraform
 app-admin/ansible"
 RDEPEND="${DEPEND}"
 
-RESTRICT="test"
+src_unpack() {
+	golang-single_src_unpack
+}
 
 src_prepare() {
-	default
-}
-
-src_compile() {
-	go build \
-		-mod=vendor \
-		-work -o "bin/${PN}" ./ || die
-}
-
-src_install() {
-	dodoc src/${EGO_PN}/{README.md}
-	dobin bin/${PN}
+	golang-single_src_prepare
 }
