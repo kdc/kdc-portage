@@ -19,5 +19,5 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
 src_install() {
-    dobin op
+	dobin op
 }
