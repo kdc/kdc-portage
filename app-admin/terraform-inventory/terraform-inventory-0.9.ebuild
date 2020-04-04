@@ -3,9 +3,7 @@
 
 EAPI=7
 
-inherit golang-base
-
-GOLANG_PKG_HAVE_TEST=1
+inherit golang-base golang-vcs-snapshot
 
 DESCRIPTION="Terraform State → Ansible Dynamic Inventory"
 HOMEPAGE="https://github.com/adammck/terraform-inventory"
@@ -22,7 +20,6 @@ DEPEND="dev-lang/go
 app-admin/terraform
 app-admin/ansible"
 RDEPEND="${DEPEND}"
-S="${WORKDIR}"
 
 src_prepare() {
 	default
