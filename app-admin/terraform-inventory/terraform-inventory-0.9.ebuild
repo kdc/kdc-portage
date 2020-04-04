@@ -3,11 +3,13 @@
 
 EAPI=7
 
+GOLANG_PKG_HAVE_TEST=1
+
 DESCRIPTION="Terraform State → Ansible Dynamic Inventory"
 HOMEPAGE="https://github.com/adammck/terraform-inventory"
-SRC_URI="https://github.com/adammck/terraform-inventory/releases/download/v${PV}/terraform-inventory_${PV}_linux_amd64.zip"
+SRC_URI="https://github.com/adammck/terraform-inventory/archive/v${PV}.tar.gz"
 
-LICENSE=""
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -17,6 +19,10 @@ app-admin/ansible"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
-src_install() {
-	dobin terraform-inventory
-}
+GOLANG_PKG_DEPENDENCIES=(
+	"github.com/adammck/venv"
+	"github.com/blang/vfs"
+	"github.com/stretchr/testify"
+)
+
+inherit golang-build
