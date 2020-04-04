@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit golang-base golang-vcs-snapshot
+inherit golang-build golang-vcs-snapshot
 
 EGO_VENDOR=("
 github.com/adammck/venv
@@ -12,7 +12,8 @@ github.com/blang/vfs")
 DESCRIPTION="Terraform State → Ansible Dynamic Inventory"
 HOMEPAGE="https://github.com/adammck/terraform-inventory"
 EGO_PN="github.com/adammck/${PN}"
-SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://${EGO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+${EGO_VENDOR_URI}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -45,4 +46,3 @@ src_install() {
 	dodoc src/${EGO_PN}/{README.md}
 	dobin bin/${PN}
 }
-
