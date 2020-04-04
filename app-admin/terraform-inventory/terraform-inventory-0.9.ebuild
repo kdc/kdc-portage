@@ -32,13 +32,7 @@ src_prepare() {
 }
 
 src_compile() {
-	mkdir bin || die
-	export GOBIN=${S}/bin GOPATH=${S}
-	cd src/${EGO_PN} || die
-	XC_ARCH=$(go env GOARCH) \
-	XC_OS=$(go env GOOS) \
-	XC_OSARCH=$(go env GOOS)/$(go env GOARCH) \
-	go build -v -o bin/${PN} || die
+	GOPATH="${S}" go install -v -work -x ${EGO_BUILD_FLAGS} "${EGO_PN}"/${PN} || die
 }
 
 src_install() {
