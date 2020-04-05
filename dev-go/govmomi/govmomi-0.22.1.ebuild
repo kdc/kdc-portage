@@ -19,6 +19,7 @@ EGO_SUM=(
         "github.com/rasky/go-xdr v0.0.0-20170217172119-4930550ba2e2/go.mod"
         "github.com/vmware/vmw-guestinfo v0.0.0-20170707015358-25eff159a728"
         "github.com/vmware/vmw-guestinfo v0.0.0-20170707015358-25eff159a728/go.mod"
+		"github.com/golang/tools v0.0.0-20190327011446-79af862e6737/go.mod"
 )
 go-module_set_globals
 
