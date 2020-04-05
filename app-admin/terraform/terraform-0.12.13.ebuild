@@ -15,8 +15,6 @@ KEYWORDS="~amd64"
 
 RESTRICT="test"
 
-DOCS=( {README,CHANGELOG}.md )
-
 src_compile() {
 	go build \
 		-mod vendor \
@@ -24,12 +22,5 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/terraform
-
-	einstalldocs
-}
-
-pkg_postinst() {
-	elog "If you would like to install shell completions please run:"
-	elog "    terraform -install-autocomplete"
+	newbin bin/terraform terraform-${PV}
 }
