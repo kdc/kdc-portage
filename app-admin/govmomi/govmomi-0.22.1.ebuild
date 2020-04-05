@@ -15,6 +15,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
+S="${WORKDIR}"
 
 src_install() {
 	newbin govc_linux_amd64 govc
