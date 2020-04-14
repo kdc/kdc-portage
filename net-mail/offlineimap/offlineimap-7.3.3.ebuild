@@ -20,8 +20,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-
 IUSE="doc ssl"
 
 RDEPEND="
-	$(python_gen_cond_dep 'dev-python/rfc6555[${PYTHON_MULTI_USEDEP}]')
-	$(python_gen_cond_dep 'dev-python/six[${PYTHON_MULTI_USEDEP}]')"
+dev-python/rfc6555
+dev-python/six"
 DEPEND="doc? ( app-text/asciidoc )"
 
 src_compile() {
