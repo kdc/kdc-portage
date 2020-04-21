@@ -23,5 +23,5 @@ src_compile() {
 
 src_install() {
 	newbin bin/terraform terraform
-	dobashcomp "${FILESDIR}"/terraform.completion.bash
+	newbashcomp "${FILESDIR}"/terraform.completion.bash terraform
 }
