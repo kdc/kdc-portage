@@ -13,11 +13,11 @@ SRC_URI="https://github.com/openshift/origin/archive/v${PV}.tar.gz -> ${P}.tar.g
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion kerberos"
+IUSE="kerberos"
 
 DEPEND="dev-lang/go
 	kerberos? ( app-crypt/mit-krb5 )"
-RDEPEND="bash-completion? ( app-shells/bash-completion )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/origin-${PV}"
 
@@ -34,5 +34,5 @@ src_install() {
 
 	dobin "_output/local/bin/linux/${MY_ARCH}/oc"
 	doman docs/man/man1/oc*
-	use bash-completion && dobashcomp contrib/completions/bash/oc
+	dobashcomp contrib/completions/bash/oc
 }
