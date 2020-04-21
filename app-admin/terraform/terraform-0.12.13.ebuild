@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit go-module
+inherit go-module bash-completion-r1
 
 DESCRIPTION="A tool for building, changing, and combining infrastructure safely"
 HOMEPAGE="https://www.terraform.io/"
@@ -23,4 +23,5 @@ src_compile() {
 
 src_install() {
 	newbin bin/terraform terraform
+	dobashcomp "${FILESDIR}"/terraform.completion.bash
 }
