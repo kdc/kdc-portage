@@ -1,6 +1,7 @@
 # Gentoo local ebuilds
 
 #### Gentoo repos.conf file 
+
 /etc/portage/repos.conf/kdc-overlay.conf 
 ```bash
 [kdc-overlay]
@@ -11,8 +12,11 @@ auto-sync = Yes
 ```
 
 #### ssh key for git access
- 1055  ssh-keygen -t ed25519 -C git@segfault.co.za -a 100
- 1056  cat .ssh/id_ed25519.pub 
+
+```bash
+ssh-keygen -t ed25519 -C git@segfault.co.za -a 100
+cat .ssh/id_ed25519.pub 
+```
 And add to repo on https://git.segfault.co.za/
 
 #### package usage
