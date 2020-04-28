@@ -27,5 +27,5 @@ src_install() {
 	dobin oc
 	dodoc README.md
 	"$S"/oc completion bash > "$S"/oc.completion.bash
-	newbashcomp oc.completion.bash
+	newbashcomp oc.completion.bash oc
 }
