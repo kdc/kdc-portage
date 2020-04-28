@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit bash-completion-r1
+
 COMMIT="0cbc58b"
 
 DESCRIPTION="Enterprise Kubernetes for Developers"
