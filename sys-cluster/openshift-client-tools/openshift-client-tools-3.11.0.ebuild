@@ -26,5 +26,6 @@ S="${WORKDIR}/openshift-origin-client-tools-v${PV}-${COMMIT}-linux-64bit"
 src_install() {
 	dobin oc
 	dodoc README.md
-	newbashcomp "${FILESDIR}"/oc.completion.bash
+	"$S"/oc completion bash > "$S"/oc.completion.bash
+	newbashcomp oc.completion.bash
 }
