@@ -22,7 +22,7 @@ RESTRICT="binchecks strip"
 S="${WORKDIR}/openshift-origin-client-tools-v${PV}-${COMMIT}-linux-64bit"
 
 src_install() {
-  dobin oc
-  dodoc README.md
-  dodoc LICENSE
+	dobin oc
+	dodoc README.md
+	newbashcomp "${FILESDIR}"/oc.completion.bash
 }
