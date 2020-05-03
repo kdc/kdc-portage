@@ -24,4 +24,4 @@ RDEPEND="
 	virtual/python-enum34[${PYTHON_USEDEP}]
 "
 
-S="${WORKDIR}/${PN}-${PV}"
+S="${WORKDIR}/${PN}-python-${PV}"
