@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	default
 	tc-export CC
 }
 
