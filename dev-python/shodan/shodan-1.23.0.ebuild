@@ -3,7 +3,8 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python2_7 python3_8 pypy pypy3 )
+PYTHON_COMPAT=( python2_7 python3_{6,7,8} pypy pypy3 )
+
 inherit distutils-r1
 
 DESCRIPTION="Python library and command-line utility for Shodan (https://developer.shodan.io)"
