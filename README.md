@@ -41,7 +41,7 @@ app-text/pandoc-bin
 dev-python/canarytools
 dev-python/jsonlines
 dev-python/linode_api4
-dev-python/python-cloudflare
+dev-python/cloudflare
 dev-python/shodan
 net-analyzer/cdpr
 net-analyzer/nessus-bin
