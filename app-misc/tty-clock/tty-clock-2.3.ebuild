@@ -25,6 +25,6 @@ src_prepare() {
 }
 
 src_install() {
-	dobin fail
+	dobin tty-clock
 	dodoc README
 }
