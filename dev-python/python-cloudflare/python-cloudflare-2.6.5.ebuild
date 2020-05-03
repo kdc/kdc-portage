@@ -24,8 +24,6 @@ RDEPEND="
 	dev-python/jsonlines
 "
 
-S="${WORKDIR}/${PN}-python-${PV}"
-
 src_prepare() {
 	default
 	rm -rf test || die
