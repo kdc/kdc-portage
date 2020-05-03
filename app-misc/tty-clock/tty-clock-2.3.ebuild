@@ -22,13 +22,9 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	default
-	tc-export CC
 }
 
 src_install() {
-	emake \
-		DESTDIR="${D}" \
-		INSTALLPATH="${D}/usr/bin" \
-		install
+	dobin fail
 	dodoc README
 }
