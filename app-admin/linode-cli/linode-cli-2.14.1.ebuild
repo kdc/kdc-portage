@@ -11,7 +11,8 @@ inherit distutils-r1
 DESCRIPTION="CLI for the Linode API v4"
 HOMEPAGE="https://www.linode.com/docs/platform/linode-cli/
 https://github.com/linode/linode-cli/releases"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+#SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/linode/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="4"
