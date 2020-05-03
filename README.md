@@ -24,3 +24,29 @@ To be able to use these ebuild, you will need to add them into your packages.key
 
 #### ebuild patches 
 patches folder is for /etc/portage/patches/
+
+#### Package list
+
+```
+app-admin/1password-cli
+app-admin/govmomi
+app-admin/linode-cli
+app-admin/terraform
+app-admin/terraform-inventory
+app-editors/atom-bin
+app-editors/typora
+app-editors/vscodium-bin
+app-misc/tty-clock
+app-text/pandoc-bin
+dev-python/canarytools
+dev-python/jsonlines
+dev-python/linode_api4
+dev-python/python-cloudflare
+dev-python/shodan
+net-analyzer/cdpr
+net-analyzer/nessus-bin
+net-misc/mac-telnet
+net-nds/ApacheDirectoryStudio
+sys-cluster/minishift
+sys-cluster/openshift-client-tools
+```
