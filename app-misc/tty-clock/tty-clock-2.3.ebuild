@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit vcs-snapshot toolchain-funcs eutils
+inherit vcs-snapshot
 
 DESCRIPTION="Analog clock in ncurses"
 HOMEPAGE="https://github.com/xorg62/tty-clock"
