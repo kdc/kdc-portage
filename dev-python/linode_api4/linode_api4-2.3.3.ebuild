@@ -23,3 +23,5 @@ RDEPEND="
 	dev-python/requests[${PYTHON_USEDEP}]
 	virtual/python-enum34[${PYTHON_USEDEP}]
 "
+
+S="${WORKDIR}/${PN}-${PV}"
