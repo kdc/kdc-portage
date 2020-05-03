@@ -7,9 +7,10 @@ PYTHON_COMPAT=( python2_7 python3_8 )
 
 inherit distutils-r1
 
-DESCRIPTION="The official python SDK for Linode API v4"
-HOMEPAGE="https://github.com/linode/linode_api4-python"
-SRC_URI="https://github.com/linode/${PN}-python/archive/${PV}.tar.gz -> ${P}.tar.gz"
+DESCRIPTION="Python wrapper for the Cloudflare Client API v4"
+HOMEPAGE="https://github.com/cloudflare/python-cloudflare
+https://pypi.org/project/cloudflare/"
+SRC_URI="https://github.com/cloudflare/python-cloudflare/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
@@ -19,7 +20,8 @@ IUSE=""
 RDEPEND="
 	dev-python/future
 	dev-python/requests
-	virtual/python-enum34
+	dev-python/pyyaml
+	dev-python/jsonlines
 "
 
 S="${WORKDIR}/${PN}-python-${PV}"

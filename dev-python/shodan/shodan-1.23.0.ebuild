@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python2_7 python3_6 pypy pypy3 )
+PYTHON_COMPAT=( python2_7 python3_8 pypy pypy3 )
 inherit distutils-r1
 
 DESCRIPTION="Python library and command-line utility for Shodan (https://developer.shodan.io)"
@@ -20,18 +20,18 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="
-dev-python/requests[${PYTHON_USEDEP}]
-dev-python/click[${PYTHON_USEDEP}]
-dev-python/click-plugins[${PYTHON_USEDEP}]
-dev-python/colorama[${PYTHON_USEDEP}]
-dev-python/requests[${PYTHON_USEDEP}]
-dev-python/xlsxwriter[${PYTHON_USEDEP}]
+	dev-python/requests
+	dev-python/click
+	dev-python/click-plugins
+	dev-python/colorama
+	dev-python/requests
+	dev-python/xlsxwriter
 "
 DEPEND="${REDEPEND}
-dev-python/setuptools[${PYTHON_USEDEP}]
-test? (
-dev-python/nose[${PYTHON_USEDEP}]
-dev-python/pytest[${PYTHON_USEDEP}]
+	dev-python/setuptools
+	test? (
+	dev-python/nose
+	dev-python/pytest
 )"
 
 python_test() {

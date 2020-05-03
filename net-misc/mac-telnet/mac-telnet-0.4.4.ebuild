@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=7
 
 inherit eutils multilib toolchain-funcs
 
@@ -21,13 +21,13 @@ QA_PREBUILT="opt/MAC-Telnet/mndp opt/MAC-Telnet/helper"
 
 
 src_unpack() {
-    unpack ${A}
-    cd "${S}"
+	unpack ${A}
+	cd "${S}"
 }
 
 src_prepare() {
-        default
-        ./autogen.sh || die
+	default
+	./autogen.sh || die
 }
 
 src_install() {
@@ -50,4 +50,3 @@ pkg_postinst() {
 	einfo "Installed in /opt/MAC-Telnet"
 	ewarn "Binarys are mndp, mactelnet, macping, mactelnetd"
 }
-

@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=6
+EAPI=7
 
-inherit eutils 
+inherit eutils
 
 DESCRIPTION="Minishift helps you run a single-nod OpenShift Cluster within a VM"
 HOMEPAGE="

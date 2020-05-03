@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python2_7 python3_6 pypy pypy3 )
+PYTHON_COMPAT=( python2_7 python3_8 pypy pypy3 )
 inherit distutils-r1
 
 DESCRIPTION="The Python Canary API Wrapper allows access to the Canary Web API"
@@ -18,12 +18,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND="dev-python/pytz[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/pytz"
 DEPEND="${REDEPEND}
-dev-python/setuptools[${PYTHON_USEDEP}]
+dev-python/setuptools
 test? (
-dev-python/nose[${PYTHON_USEDEP}]
-dev-python/pytest[${PYTHON_USEDEP}]
+dev-python/nose
+dev-python/pytest
 )"
 
 python_test() {

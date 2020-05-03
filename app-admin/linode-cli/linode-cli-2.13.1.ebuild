@@ -1,17 +1,16 @@
 # Copyright 2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-PYTHON_COMPAT=( python3_{4,5,6} )
+EAPI=7
 
-inherit distutils-r1 versionator
+PYTHON_COMPAT=( python3_8 )
+
+inherit distutils-r1
 
 DESCRIPTION="CLI for the Linode API v4"
 HOMEPAGE="https://www.linode.com/docs/platform/linode-cli/
 https://github.com/linode/linode-cli/releases"
-MY_PV="${PV/_beta/b}"
-MY_P="${PN}-${MY_PV}"
-SRC_URI="https://github.com/linode/${PN}/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
+SRC_URI="https://github.com/linode/${PN}-python/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="4"
@@ -19,12 +18,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-dev-python/colorclass[${PYTHON_USEDEP}]
-dev-python/pyyaml[${PYTHON_USEDEP}]
-dev-python/requests[${PYTHON_USEDEP}]
-dev-python/terminaltables[${PYTHON_USEDEP}]
-virtual/python-enum34[${PYTHON_USEDEP}]
+	dev-python/colorclass
+	dev-python/pyyaml
+	dev-python/requests
+	dev-python/terminaltables
+	virtual/python-enum34
 "
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${PN}-${PV}"

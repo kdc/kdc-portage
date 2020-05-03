@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 DESCRIPTION="Conversion between markup formats"
 HOMEPAGE="http://pandoc.org https://github.com/jgm/pandoc/releases/"
