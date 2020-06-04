@@ -18,7 +18,9 @@ LICENSE="Apache-2.0"
 KEYWORDS="amd64"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="
+dev-python/six[${PYTHON_USEDEP}]
+dev-python/flake8[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
 	sed -e "/setup_requires/ d" -i setup.py || die
