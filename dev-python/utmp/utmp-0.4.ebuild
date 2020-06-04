@@ -19,3 +19,8 @@ KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND=""
+
+python_prepare_all() {
+	sed -e "/setup_requires/ d" -i setup.py || die
+	distutils-r1_python_prepare_all
+}
