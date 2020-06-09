@@ -19,6 +19,6 @@ IUSE=""
 DEPEND="dev-lang/go"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
+pkg_postinst() {
 	exit 1
 }
