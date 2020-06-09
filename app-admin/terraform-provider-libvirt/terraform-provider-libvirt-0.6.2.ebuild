@@ -32,13 +32,13 @@ DOCS=(
 	examples/
 )
 src_compile() {
-	pushd src/${EGO_PN} || die
-	emake
+	pushd src/${EGO_SRC} || die
+	emake build
 	popd
 }
 
 src_install() {
-	pushd src/${EGO_PN} || die
-	dobin build/gorun
+	pushd src/${EGO_SRC} || die
+	dobin terraform-provider-libvirt
 	popd || die
 }
