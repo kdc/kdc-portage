@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit golang-vcs
+inherit golang-vcs golang-build
 
 DESCRIPTION="gorun allows you to  put #! in the source code of a Go program to run it"
 HOMEPAGE="https://github.com/erning/gorun"
@@ -17,10 +17,10 @@ IUSE=""
 DEPEND="dev-lang/go"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	default
+src_compile() {
+	go build -o build/${PN} || die
 }
 
 src_install() {
-	dobin ${PN}
+	dobin build/${PN}
 }
