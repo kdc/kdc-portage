@@ -11,9 +11,9 @@ GOLANG_PKG_HAVE_TEST=0
 DESCRIPTION="gorun allows you to  put #! in the source code of a Go program to run it"
 HOMEPAGE="https://github.com/erning/gorun"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-lang/go"
