@@ -19,4 +19,6 @@ IUSE=""
 DEPEND="dev-lang/go"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/plzfail
+src_prepare() {
+	exit 1
+}
