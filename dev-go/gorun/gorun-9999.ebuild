@@ -18,19 +18,7 @@ DEPEND="dev-lang/go"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	export CGO_CFLAGS="-I${ROOT}/usr/include"
-	export CGO_LDFLAGS="$(usex hardened '-fno-PIC ' '')
-	-L${ROOT}/usr/$(get_libdir)"
-
-	# build up optional flags
-	local options=(
-	$(usex ambient 'ambient' '')
-	$(usex apparmor 'apparmor' '')
-	$(usex seccomp 'seccomp' '')
-	$(usex kmem '' 'nokmem')
-)
-
-GOPATH="${S}" emake BUILDTAGS="${options[*]}" -C src/${EGO_PN}
+	GOPATH="${S}" emake BUILDTAGS="${options[*]}" -C src/${EGO_PN}
 }
 
 src_install() {
