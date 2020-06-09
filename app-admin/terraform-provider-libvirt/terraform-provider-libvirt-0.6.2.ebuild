@@ -17,7 +17,7 @@ SRC_URI="https://${EGO_SRC}/archive/${GOLANG_PKG_ARCHIVEPREFIX}${GOLANG_PKG_VERS
 DESCRIPTION="Terraform provider to provision infrastructure with Linux's KVM using libvirt"
 HOMEPAGE="https://github.com/dmacvicar/terraform-provider-libvirt"
 
-LICENSE="Apache 2.0"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
