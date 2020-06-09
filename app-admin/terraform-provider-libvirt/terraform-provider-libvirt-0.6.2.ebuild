@@ -31,11 +31,6 @@ DOCS=(
 	README.md
 	examples/
 )
-src_compile() {
-	pushd src/${EGO_SRC} || die
-	emake build
-	popd
-}
 
 src_install() {
 	pushd src/${EGO_SRC} || die
