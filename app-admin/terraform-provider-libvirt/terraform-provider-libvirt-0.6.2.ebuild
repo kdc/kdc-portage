@@ -31,3 +31,14 @@ DOCS=(
 	README.md
 	examples/
 )
+src_compile() {
+	pushd src/${EGO_PN} || die
+	emake
+	popd
+}
+
+src_install() {
+	pushd src/${EGO_PN} || die
+	dobin build/gorun
+	popd || die
+}
