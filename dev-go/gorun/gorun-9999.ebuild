@@ -18,11 +18,13 @@ DEPEND="dev-lang/go"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	GOPATH="${S}" emake BUILDTAGS="${options[*]}" -C src/${EGO_PN}
+	pushd src/${EGO_PN} || die
+	go build -o build/gorun || die
+	popd
 }
 
 src_install() {
 	pushd src/${EGO_PN} || die
-	dobin gorun
+	dobin build/gorun
 	popd || die
 }
