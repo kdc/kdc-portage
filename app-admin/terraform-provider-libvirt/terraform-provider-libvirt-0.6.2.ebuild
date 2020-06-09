@@ -24,5 +24,7 @@ src_compile() {
 }
 
 src_install() {
-	newbin bin/terraform-provider-libvirt
+	newbin bin/terraform-provider-libvirt terraform-provider-libvirt
+	dodoc docs/README.md
+	dodoc examples/
 }
