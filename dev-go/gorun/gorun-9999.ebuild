@@ -18,3 +18,5 @@ IUSE=""
 
 DEPEND="dev-lang/go"
 RDEPEND="${DEPEND}"
+
+S=${WORKDIR}/plzfail
