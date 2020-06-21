@@ -10,6 +10,8 @@ EGO_VENDOR=(
 inherit golang-build golang-vcs-snapshot
 
 DESCRIPTION="Argo Tunnel client, written in GoLang"
+HOMEPAGE="https://developers.cloudflare.com/argo-tunnel/
+https://github.com/cloudflare/cloudflared/"
 ARCHIVE_URI="https://${EGO_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
 ${EGO_VENDOR_URI}"
 SRC_URI="${ARCHIVE_URI}"
