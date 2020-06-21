@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit golang-vcs golang-build
+inherit golang-vcs golang-build golang-vcs-snapshot
 
 EGO_VENDOR=(
 	"dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod"
