@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit bash-completion-r1
-
 DESCRIPTION="Universal Command Line Interface for Amazon Web Services version 2"
 HOMEPAGE="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
 https://github.com/aws/aws-cli/tree/v2"
@@ -26,5 +24,5 @@ src_install() {
 	cp -rT "${S}/dist/" "${D}/opt/${PN}/" || die "install failed!"
 	dosym "${D}/opt/awscli/aws" usr/bin/aws
 	dosym "${D}/opt/awscli/aws_completer" usr/bin/aws_completer
-	dobashcomp "${FILESDIR}"/awscli.bash || die
+	cp "${FILESDIR}"/awscli.bash ${D}/etc/bash_completion.d/ || die
 }
