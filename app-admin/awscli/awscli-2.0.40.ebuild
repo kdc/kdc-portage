@@ -20,9 +20,10 @@ BDEPEND=""
 S="${WORKDIR}/aws"
 
 src_install() {
-	dodir /opt/${PN}
+	dodir "/opt/${PN}"
 	cp -rT "${S}/dist/" "${D}/opt/${PN}/" || die "install failed!"
-	dosym "${D}/opt/awscli/aws" usr/bin/aws
-	dosym "${D}/opt/awscli/aws_completer" usr/bin/aws_completer
-	cp "${FILESDIR}"/awscli.bash ${D}/etc/bash_completion.d/ || die
+	dosym "${D}/opt/awscli/aws" "usr/bin/aws"
+	dosym "${D}/opt/awscli/aws_completer" "usr/bin/aws_completer"
+	mkdir -p "${D}/etc/bash_completion.d" || die
+	cp "${FILESDIR}/awscli.bash" "${D}/etc/bash_completion.d/" || die
 }
