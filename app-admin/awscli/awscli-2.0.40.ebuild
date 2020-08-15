@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit bash-completion-r1
+
 DESCRIPTION="Universal Command Line Interface for Amazon Web Services version 2"
 HOMEPAGE="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
 https://github.com/aws/aws-cli/tree/v2"
