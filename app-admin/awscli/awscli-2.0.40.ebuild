@@ -26,4 +26,5 @@ src_install() {
 	cp -rT "${S}/dist/" "${D}/opt/${PN}/" || die "install failed!"
 	dosym "${D}/opt/awscli/aws" usr/bin/aws
 	dosym "${D}/opt/awscli/aws_completer" usr/bin/aws_completer
+	dobashcomp files/awscli.bash || die
 }
