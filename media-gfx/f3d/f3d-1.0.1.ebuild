@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="A fast and minimalist 3D viewer"
 HOMEPAGE="https://gitlab.kitware.com/f3d/f3d/
 https://github.com/Kitware/F3D"
-SRC_URI="https://github.com/Kitware/F3D/archive/v${PV}.tar.gz"
+SRC_URI="https://gitlab.kitware.com/f3d/f3d/uploads/8495b462789f1dd3e45589a8c5b9332d/f3d-${PV}-Linux.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
