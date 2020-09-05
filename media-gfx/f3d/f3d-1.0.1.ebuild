@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit bash-completion-r1
+
 DESCRIPTION="A fast and minimalist 3D viewer"
 HOMEPAGE="https://gitlab.kitware.com/f3d/f3d/
 https://github.com/Kitware/F3D"
