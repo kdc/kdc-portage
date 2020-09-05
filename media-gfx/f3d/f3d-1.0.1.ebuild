@@ -8,7 +8,7 @@ HOMEPAGE="https://gitlab.kitware.com/f3d/f3d/
 https://github.com/Kitware/F3D"
 SRC_URI="https://github.com/Kitware/F3D/archive/v${PV}.tar.gz"
 
-LICENSE=""
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
