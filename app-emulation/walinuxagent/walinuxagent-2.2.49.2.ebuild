@@ -19,16 +19,16 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
-	dev-python/pyasn1[${PYTHON_USEDEP}]
-	sys-apps/util-linux
-	app-admin/sudo"
+dev-python/pyasn1[${PYTHON_USEDEP}]
+sys-apps/util-linux
+app-admin/sudo"
 
 S="${WORKDIR}/WALinuxAgent-${PV}"
 
 src_prepare() {
 	# do not install tests
 	rm -rf tests
-	
+
 	# allow root login
 	# use ed25519 instead of rsa
 	sed -i \
@@ -62,6 +62,6 @@ python_install_all() {
 	newins config/waagent.logrotate waagent
 
 	keepdir /var/lib/waagent
-	
+
 	distutils-r1_python_install_all
 }

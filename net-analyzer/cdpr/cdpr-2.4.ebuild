@@ -22,7 +22,7 @@ src_unpack() {
 
 src_install() {
 	dosbin cdpr
-	dodoc COPYING INSTALL license.txt README README.cdprs 
+	dodoc COPYING INSTALL license.txt README README.cdprs
 	cp -r "${S}/cdprs" "${D}/usr/share/doc/${PF}/"
 	cp -r "${S}/cdpr.conf" "${D}/usr/share/doc/${PF}/cdpr.conf.sample"
 }

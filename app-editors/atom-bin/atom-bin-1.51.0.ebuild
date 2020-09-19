@@ -23,26 +23,26 @@ RESTRICT="mirror strip"
 S="${WORKDIR}/usr"
 
 src_prepare() {
-  default
-  xdg_environment_reset
+	default
+	xdg_environment_reset
 }
 
 src_unpack() {
-  rpm_unpack ${P}.x86_64.rpm
+	rpm_unpack ${P}.x86_64.rpm
 }
 
 src_install() {
-  cp -r "${S}"  "${D}" || die "Install failed!"
+	cp -r "${S}"  "${D}" || die "Install failed!"
 }
 
 pkg_postinst() {
-  xdg_icon_cache_update
-  xdg_desktop_database_update
-  xdg_mimeinfo_database_update
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
 
 pkg_postrm() {
-  xdg_icon_cache_update
-  xdg_desktop_database_update
-  xdg_mimeinfo_database_update
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
