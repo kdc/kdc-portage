@@ -17,9 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="!media-gfx/slic3r
-	>=dev-libs/boost-1.73[threads]
+	dev-libs/boost[threads]
 	>=media-gfx/openvdb-5.0[-abi4-compat]
-	>=sci-mathematics/cgal-4.14
+	sci-mathematics/cgal
 	dev-cpp/eigen
 	dev-cpp/tbb
 	dev-libs/cereal
