@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="!media-gfx/slic3r
 	dev-libs/boost[threads]
 	>=media-gfx/openvdb-5.0[-abi4-compat]
-	sci-mathematics/cgal
+	>=sci-mathematics/cgal-4.14
 	dev-cpp/eigen
 	dev-cpp/tbb
 	dev-libs/cereal
@@ -28,7 +28,7 @@ RDEPEND="!media-gfx/slic3r
 	media-libs/glew
 	net-misc/curl
 	sci-libs/nlopt[cxx]
-	x11-libs/wxGTK
+	x11-libs/wxGTK:3.0-gtk3
 "
 
 DEPEND="${RDEPEND}"
