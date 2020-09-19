@@ -28,7 +28,7 @@ RDEPEND="!media-gfx/slic3r
 	media-libs/glew
 	net-misc/curl
 	sci-libs/nlopt[cxx]
-	x11-libs/wxGTK:3.0-gtk3
+	x11-libs/wxGTK
 "
 
 DEPEND="${RDEPEND}"
