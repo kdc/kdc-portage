@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_unpack() {
-	rpm_unpack ${P}.rpm
+	rpm_unpack ${P}-1.rpm
 }
 
 src_install() {
