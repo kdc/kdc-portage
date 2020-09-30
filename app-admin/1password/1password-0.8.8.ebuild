@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit rpm xdg-utils
+inherit rpm
 
 DESCRIPTION="1Password command-line tool"
 HOMEPAGE="
@@ -27,24 +27,5 @@ src_install() {
 	doins -r opt/1Password
 
 	insinto /usr/share
-	doins -r usr/share
-
-	domenu usr/share/applications/1password.desktop
-	doicon usr/share/icons/hicolor/32x32/apps/1password.png
-	doicon usr/share/icons/hicolor/64x64/apps/1password.png
-	doicon usr/share/icons/hicolor/256x256/apps/1password.png
-	doicon usr/share/icons/hicolor/512x512/apps/1password.png
+	doins -r usr/share/polkit-1
 }
-
-pkg_postinst() {
-	xdg_icon_cache_update
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
-}
-
-pkg_postrm() {
-	xdg_icon_cache_update
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
-}
-
