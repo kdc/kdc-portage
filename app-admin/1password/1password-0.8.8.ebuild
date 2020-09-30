@@ -20,7 +20,7 @@ RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}"
+S="${WORKDIR}/work"
 
 src_prepare() {
 	default
