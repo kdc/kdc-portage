@@ -20,18 +20,20 @@ RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}/work"
-
-src_prepare() {
-	default
-}
-
-src_unpack() {
-	rpm_unpack ${P}-1.rpm
-}
+S="${WORKDIR}"
 
 src_install() {
-	cp -r "${S}" "${D}" || die "Install Failed!"
+	insinto /opt
+	doins -r opt/1Password
+
+	insinto /usr/share
+	doins -r usr/share
+
+	domenu usr/share/applications/1password.desktop
+	doicon usr/share/icons/hicolor/32x32/apps/1password.png
+	doicon usr/share/icons/hicolor/64x64/apps/1password.png
+	doicon usr/share/icons/hicolor/256x256/apps/1password.png
+	doicon usr/share/icons/hicolor/512x512/apps/1password.png
 }
 
 pkg_postinst() {
