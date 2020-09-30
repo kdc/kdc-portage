@@ -5,11 +5,14 @@ EAPI=7
 
 inherit rpm
 
+MY_PV=$(ver_rs 3 '-')
+MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="1Password command-line tool"
 HOMEPAGE="
 https://1password.com/
 https://support.1password.com/cs/getting-started-linux/"
-SRC_URI="https://onepassword.s3.amazonaws.com/linux/rpm/${P}-1.rpm"
+SRC_URI="https://onepassword.s3.amazonaws.com/linux/rpm/${MY_P}.rpm"
 
 LICENSE=""
 SLOT="0"
