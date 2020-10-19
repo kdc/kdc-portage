@@ -29,7 +29,7 @@ kdc-overlay.conf
 [kdc-overlay]
 location = /var/db/repos/kdc-overlay
 sync-type = git
-sync-uri = git@git.segfault.co.za:kevinc/kdc-portage.git
+sync-uri = git@gitlab.com:M165/segfault/kdc-portage.git
 auto-sync = Yes
 sync-depth = 1
 ```
