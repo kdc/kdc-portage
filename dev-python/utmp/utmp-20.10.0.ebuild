@@ -9,9 +9,11 @@ DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
 DESCRIPTION="Pure-Python library to decode/read utmp and wtmp files"
-HOMEPAGE="http://srcco.de/
+HOMEPAGE="https://codeberg.org/hjacobs/utmp/releases
 https://pypi.org/project/utmp"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://codeberg.org/hjacobs/utmp/archive/${PV}.tar.gz"
+
+RESTRICT="mirror fetch strip"
 
 SLOT="0"
 LICENSE="Apache-2.0"

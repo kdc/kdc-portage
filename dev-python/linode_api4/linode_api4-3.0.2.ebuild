@@ -19,9 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/future[${PYTHON_USEDEP}]
-	dev-python/requests[${PYTHON_USEDEP}]
-	virtual/python-enum34[${PYTHON_USEDEP}]
+	dev-python/httplib2[${PYTHON_USEDEP}]
 "
 
 S="${WORKDIR}/${PN}-python-${PV}"
