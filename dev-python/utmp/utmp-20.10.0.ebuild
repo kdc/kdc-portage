@@ -13,7 +13,7 @@ HOMEPAGE="https://codeberg.org/hjacobs/utmp/releases
 https://pypi.org/project/utmp"
 SRC_URI="https://codeberg.org/hjacobs/utmp/archive/${PV}.tar.gz"
 
-RESTRICT="mirror fetch strip"
+RESTRICT="mirror strip"
 
 SLOT="0"
 LICENSE="Apache-2.0"
