@@ -22,8 +22,6 @@ IUSE=""
 
 RDEPEND="dev-python/requests[${PYTHON_USEDEP}]"
 
-S="${WORKDIR}/${PN}"
-
 python_prepare_all() {
 	sed -e "/install_requires/ d" -i setup.py || die
 	distutils-r1_python_prepare_all
