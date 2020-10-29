@@ -11,7 +11,8 @@ MY_P="${PN}-${MY_PV}"
 DESCRIPTION="1Password command-line tool"
 HOMEPAGE="
 https://1password.com/
-https://support.1password.com/cs/getting-started-linux/"
+https://support.1password.com/cs/getting-started-linux/
+https://releases.1password.com/linux/"
 SRC_URI="https://onepassword.s3.amazonaws.com/linux/rpm/${MY_P}.rpm"
 
 LICENSE=""
