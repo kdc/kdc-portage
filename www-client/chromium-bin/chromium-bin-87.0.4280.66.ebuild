@@ -10,8 +10,7 @@ CHROMIUM_LANGS="am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
 inherit chromium-2 desktop pax-utils readme.gentoo-r1 unpacker xdg-utils
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
-HOMEPAGE="https://chromium.org/
-https://github.com/stha09/gpo-stha09"
+HOMEPAGE="https://chromium.org/"
 SRC_URI="https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-common.tar.xz
 	https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-l10n.tar.xz
 	devtools? ( https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-resources.tar.xz )
@@ -19,6 +18,11 @@ SRC_URI="https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-c
 		https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-common-x86_64.tar.xz
 		vaapi? ( https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-vaapi-x86_64.tar.xz )
 		!vaapi? ( https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-official-x86_64.tar.xz )
+	)
+	arm64? (
+		https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-common-aarch64.tar.xz
+		vaapi? ( https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-vaapi-aarch64.tar.xz )
+		!vaapi? ( https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-official-aarch64.tar.xz )
 	)
 	x86? (
 		https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-common-i686.tar.xz
@@ -28,7 +32,7 @@ SRC_URI="https://dev.gentoo.org/~sultan/distfiles/www-client/chromium-bin/${P}-c
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~arm64 ~x86"
 IUSE="cpu_flags_x86_sse2 devtools selinux +suid +swiftshader vaapi widevine"
 
 RDEPEND="
@@ -44,7 +48,7 @@ RDEPEND="
 	dev-libs/libxslt
 	dev-libs/nspr
 	>=dev-libs/nss-3.26
-	<dev-libs/re2-0.2020.10.01
+	>=dev-libs/re2-0.2020.11.01
 	media-libs/alsa-lib
 	media-libs/flac
 	media-libs/fontconfig
@@ -123,9 +127,11 @@ in /etc/chromium-bin/default.
 "
 
 pkg_pretend() {
-	if ! use cpu_flags_x86_sse2; then
-		eerror "This package requires a CPU supporting the SSE2 instruction set."
-		die "SSE2 support missing"
+	if use amd64 || use x86; then
+		if ! use cpu_flags_x86_sse2; then
+			eerror "This package requires a CPU supporting the SSE2 instruction set."
+			die "SSE2 support missing"
+		fi
 	fi
 }
 
