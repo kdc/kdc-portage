@@ -1,8 +1,10 @@
-# Gentoo local ebuilds
+# Personal Overlay for Gentoo
 
 Not allot of testing, just allot of version bumping :D
 
 ## repos.conf files I use
+
+### Gentoo 
 
 gentoo.conf
 ```bash
@@ -25,6 +27,7 @@ sync-openpgp-key-refresh-retry-delay-exp-base = 2
 sync-openpgp-key-refresh-retry-delay-max = 60
 sync-openpgp-key-refresh-retry-delay-mult = 4
 ```
+### Personal overlay
 
 kdc-overlay.conf
 ```bash
@@ -36,6 +39,8 @@ auto-sync = Yes
 sync-depth = 1
 ```
 
+### Pentoo Linux's Security overlay
+
 pentoo-overlay.conf
 ```bash
 [pentoo]
@@ -45,6 +50,8 @@ sync-uri = https://github.com/pentoo/pentoo-overlay.git
 auto-sync = Yes
 sync-depth = 1
 ```
+
+### Gentoo's Steam overlay
 
 steam-overlay.conf
 ```bash
