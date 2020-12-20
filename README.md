@@ -1,6 +1,8 @@
 # Gentoo local ebuilds
 
-## Gentoo repos.conf files 
+Not allot of testing, just allot of version bumping :D
+
+## repos.conf files I use
 
 gentoo.conf
 ```bash
@@ -53,10 +55,9 @@ sync-uri = https://github.com/anyc/steam-overlay
 auto-sync = true
 ```
 
-## ssh key for git access
+## SSHKey for private Repo Access
 
 ```bash
-ssh-keygen -t ed25519 -C git@segfault.co.za -a 100
+ssh-keygen -t ed25519 -C portage@$(hostname -f) -a 100
 cat .ssh/id_ed25519.pub 
 ```
-And add to repo on https://git.segfault.co.za/
