@@ -4,7 +4,7 @@ Not allot of testing, just allot of version bumping :D
 
 ## repos.conf files I use
 
-### Gentoo 
+### Gentoo
 
 gentoo.conf
 ```bash
@@ -56,15 +56,21 @@ sync-depth = 1
 steam-overlay.conf
 ```bash
 [steam-overlay]
-location = /var/db/repos/steam-overlay
+
+# Gentoo overlay for Valve's Steam client and Steam-based games.
+# Maintainer: anyc (https://github.com/anyc)
+# https://raw.githubusercontent.com/anyc/steam-overlay/master/steam-overlay.conf
+
+location = /usr/local/portage/steam-overlay
 sync-type = git
-sync-uri = https://github.com/anyc/steam-overlay
-auto-sync = true
+sync-uri = https://github.com/anyc/steam-overlay.git
+priority = 50
+auto-sync = Yes
 ```
 
 ## SSHKey for private Repo Access
 
 ```bash
 ssh-keygen -t ed25519 -C portage@$(hostname -f) -a 100
-cat .ssh/id_ed25519.pub 
+cat .ssh/id_ed25519.pub
 ```
