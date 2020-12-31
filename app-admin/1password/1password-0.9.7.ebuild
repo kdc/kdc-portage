@@ -6,7 +6,7 @@ EAPI=7
 inherit rpm
 
 MY_PV=$(ver_rs 3 '-')
-MY_P="${PN}-${MY_PV}-2"
+MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="1Password command-line tool"
 HOMEPAGE="
