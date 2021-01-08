@@ -23,6 +23,6 @@ S="${WORKDIR}"
 src_install() {
 	insinto /opt/superProductivity
 	doins -r ${S}/usr/share/doc/${PN}
-	dosym /opt/superProductivity/superproductivity /usr/bin/${PN}
-	fperms 0755 /opt/superProductivity/superproductivity
+	dosym /opt/superProductivity/${PN} /usr/bin/${PN}
+	fperms 0755 /opt/superProductivity/${PN}
 }
