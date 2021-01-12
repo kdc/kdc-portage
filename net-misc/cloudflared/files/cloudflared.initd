@@ -1,0 +1,21 @@
+#!/sbin/openrc-run
+# Copyright 2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+supervisor="supervise-daemon"
+
+name="cloudflared daemon"
+description="Argo DNS Tunnel client"
+command=/usr/bin/cloudflared
+command_args="${cloudflared_args}"
+
+depend() {
+    need net
+    use logger
+}
+
+reload() {
+    ebegin "Reloading cloudflared configuration"
+    ${supervisor} ${RC_SVCNAME} --signal HUP
+    eend $?
+}

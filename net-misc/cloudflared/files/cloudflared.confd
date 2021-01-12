@@ -1,0 +1,6 @@
+# /etc/conf.d/cloudflared: config file for /etc/init.d/mbsync
+
+# Options to pass to the cloudflared daemon.
+# See the cloudflared(1) man page for more info.
+
+CLOUDFLARED_ARGS=""

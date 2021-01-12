@@ -37,4 +37,6 @@ src_compile() {
 
 src_install() {
 	dobin bin/*
+	newconfd $FILESDIR/$PN.confd $PN
+	newinitd $FILESDIR/$PN.initd $PN
 }
