@@ -31,7 +31,4 @@ src_install() {
 	doins -r opt/1Password
 	fperms 0755 /opt/1Password/1password
 	dosym /opt/1Password/1password /usr/bin/${PN}
-
-	insinto /usr/share
-	doins -r usr/share/polkit-1
 }
