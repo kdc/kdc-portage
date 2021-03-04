@@ -8,7 +8,7 @@ inherit bash-completion-r1
 DESCRIPTION="A fast and minimalist 3D viewer"
 HOMEPAGE="https://gitlab.kitware.com/f3d/f3d/
 https://github.com/Kitware/F3D"
-SRC_URI="https://gitlab.kitware.com/f3d/f3d/uploads/8495b462789f1dd3e45589a8c5b9332d/f3d-${PV}-Linux.tar.xz"
+SRC_URI="https://gitlab.kitware.com/f3d/f3d/uploads/937b2b6c8a14b40538983195395b4094/f3d-${PV}-Linux.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
