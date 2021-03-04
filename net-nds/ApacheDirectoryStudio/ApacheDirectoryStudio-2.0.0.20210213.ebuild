@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Apache Directory Studio is an universal LDAP directory tool"
 HOMEPAGE="https://directory.apache.org/studio
 https://downloads.apache.org/directory/studio"
-SRC_URI="https://downloads.apache.org/directory/studio/2.0.0.v20200411-M15/ApacheDirectoryStudio-2.0.0.v20200411-M15-linux.gtk.x86_64.tar.gz"
+SRC_URI="https://downloads.apache.org/directory/studio//2.0.0.v20210213-M16/ApacheDirectoryStudio-2.0.0.v20210213-M16-linux.gtk.x86_64.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
