@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-java/maven-bin
-		>=virtual/jdk-11
+		>=dev-java/openjdk-bin-11
 		x11-libs/gtk+:2"
 RDEPEND="${DEPEND}"
 
