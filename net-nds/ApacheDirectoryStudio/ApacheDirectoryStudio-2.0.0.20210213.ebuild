@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-java/maven-bin
-		>=dev-java/openjdk-bin-11
-		x11-libs/gtk+:2"
+		dev-java/openjdk-bin:11
+		x11-libs/gtk+:3"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
