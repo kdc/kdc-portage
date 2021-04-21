@@ -22,11 +22,11 @@ RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}"
 
 src_install() {
 	insinto /opt
-	doins -r opt/1Password
+	doins -r ${MY_P}
 	fperms 0755 /opt/1Password/1password
 	dosym /opt/1Password/1password /usr/bin/${PN}
 }
