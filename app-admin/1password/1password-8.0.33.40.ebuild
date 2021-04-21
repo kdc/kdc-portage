@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit rpm
-
 MY_PV=$(ver_rs 3 '-')
 MY_P="${PN}-${MY_PV}.BETA"
 
@@ -13,7 +11,7 @@ HOMEPAGE="
 https://1password.com/
 https://releases.1password.com/linux/
 https://aur.archlinux.org/packages/1password/"
-SRC_URI="https://onepassword.s3.amazonaws.com/linux/rpm/${MY_P}.x86_64.rpm"
+SRC_URI="https://downloads.1password.com/linux/tar/beta/x86_64/${MY_P}.x64.tar.gz"
 
 LICENSE=""
 SLOT="0"
