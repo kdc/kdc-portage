@@ -19,6 +19,6 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-	newbin tfswitch
+	dobin tfswitch
 	dodoc README.md
 }
