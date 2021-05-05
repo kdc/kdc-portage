@@ -15,7 +15,7 @@ https://releases.1password.com/linux/
 https://aur.archlinux.org/packages/1password/"
 SRC_URI="https://onepassword.s3.amazonaws.com/linux/rpm/${MY_P}.x86_64.rpm"
 
-LICENSE=""
+LICENSE="1password"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
