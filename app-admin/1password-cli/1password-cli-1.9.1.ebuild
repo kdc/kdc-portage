@@ -9,7 +9,7 @@ https://1password.com/
 https://app-updates.agilebits.com/product_history/CLI"
 SRC_URI="https://cache.agilebits.com/dist/1P/op/pkg/v${PV}/op_linux_amd64_v${PV}.zip"
 
-LICENSE=""
+LICENSE="1password"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
