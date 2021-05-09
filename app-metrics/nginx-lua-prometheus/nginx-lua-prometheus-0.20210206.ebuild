@@ -26,7 +26,7 @@ REQUIRED_USE="${LUA_REQUIRED_USE}"
 COMMON_DEPEND="${LUA_DEPS}"
 DEPEND="${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}
-	www-servers/nginx[nginx_modules_http_lua,${LUA_SINGLE_USEDEP}]"
+	www-servers/nginx[luajit]"
 BDEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
