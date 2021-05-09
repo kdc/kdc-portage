@@ -1,0 +1,3 @@
+# /etc/conf.d/nginx-prometheus-exporter
+
+EXPORTER_ARGS=""
