@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit desktop pax-utils
+inherit desktop pax-utils xdg-utils
 
 MY_PN="${PN/-bin}"
 
@@ -42,13 +42,26 @@ QA_PREBUILT="opt/${MY_PN}/codium"
 
 S="${WORKDIR}"
 
+src_unpack() {
+	:
+}
+
 src_install(){
 	mkdir -p "${ED%/}/opt/${MY_PN}"
-	cp -r . "${ED%/}/opt/${MY_PN}/"
+	cd "${ED%/}/opt/${MY_PN}/"
+	unpack ${A}
 	dodir /usr/bin
 	dosym ../../opt/${MY_PN}/bin/codium /usr/bin/${MY_PN}
 	dosym ../../opt/${MY_PN}/bin/codium /usr/bin/codium
 	domenu "${FILESDIR}/${PN}.desktop"
 	newicon "resources/app/resources/linux/code.png" ${MY_PN}.png
 	pax-mark m "${ED%/}"/opt/${MY_PN}/codium
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
 }
