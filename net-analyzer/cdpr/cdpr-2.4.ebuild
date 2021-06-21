@@ -15,5 +15,17 @@ IUSE=""
 DEPEND="net-libs/libpcap"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-makefile-patch-cflags.patch
+	"${FILESDIR}"/${PN}-makefile-patch-cflags.patch
 )
+
+src_prepare() {
+	eapply -p0 "${FILESDIR}"/${PN}-makefile-patch-cflags.patch
+	eapply_user
+}
+
+src_install() {
+	dosbin cdpr
+	dodoc COPYING INSTALL license.txt README README.cdprs
+	cp -r "${S}/cdprs" "${D}/usr/share/doc/${PF}/"
+	cp -r "${S}/cdpr.conf" "${D}/usr/share/doc/${PF}/cdpr.conf.sample"
+}
