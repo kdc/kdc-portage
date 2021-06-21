@@ -1,0 +1,11 @@
+--- Makefile	2021-06-21 08:13:41.322380150 +0200
++++ Makefile	2021-06-21 08:14:56.726160099 +0200
+@@ -3,7 +3,7 @@
+ #CFLAGS=-Wall -ggdb -lpcap -I/usr/include/pcap
+
+ # Standard build with pcap installed on the system
+-CFLAGS = -Wall -W -O2
++CFLAGS = -fcommon
+ #CFLAGS = -Wall -W -ggdb
+
+ # Build for the Zaurus with the pcap headers/libs one dir up

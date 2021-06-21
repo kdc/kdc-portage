@@ -5,15 +5,14 @@ EAPI=7
 
 inherit rpm
 
-MY_PV=$(ver_rs 3 '-')
-MY_P="${PN}-${MY_PV}.BETA"
+MY_PV="8.1.0-45"
 
 DESCRIPTION="1Password command-line tool"
 HOMEPAGE="
 https://1password.com/
 https://releases.1password.com/linux/
 https://aur.archlinux.org/packages/1password/"
-SRC_URI="https://onepassword.s3.amazonaws.com/linux/rpm/${MY_P}.x86_64.rpm"
+SRC_URI="https://downloads.1password.com/linux/rpm/stable/x86_64/1password-latest.rpm"
 
 LICENSE="1password"
 SLOT="0"
