@@ -13,3 +13,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sparc ~x
 IUSE=""
 
 DEPEND="net-libs/libpcap"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-makefile-patch-cflags.patch
+)
