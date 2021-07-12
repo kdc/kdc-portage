@@ -5,13 +5,13 @@ EAPI=7
 
 inherit cargo
 
-CRATES=""
+#CRATES=""
 
 DESCRIPTION="ELF visualizer. Generates HTML files from ELF binaries"
 HOMEPAGE="https://crates.io/crates/elfcat
 https://github.com/ruslashev/elfcat/releases"
-SRC_URI="https://github.com/ruslashev/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-$(cargo_crate_uris ${CRATES})"
+SRC_URI="https://github.com/ruslashev/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+#$(cargo_crate_uris ${CRATES})"
 
 LICENSE="ZLIB"
 SLOT="0"
