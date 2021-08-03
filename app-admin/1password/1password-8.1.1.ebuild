@@ -25,8 +25,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	insinto /opt
-	doins -r opt/1Password
-	fperms 0755 /opt/1Password/1password
-	dosym /opt/1Password/1password /usr/bin/${PN}
+	insinto "/opt/${PN}"
+	doins -r *
+	fperms 0775 "/opt/${PN}/${PN}"
+	dosym "/opt/${PN}/${PN}" "/usr/bin/${PN}"
 }
