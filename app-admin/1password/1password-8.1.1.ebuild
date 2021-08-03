@@ -5,7 +5,7 @@ EAPI=7
 
 inherit rpm
 
-MY_PV="8.1.0-45"
+MY_PV="8.1.1"
 
 DESCRIPTION="1Password command-line tool"
 HOMEPAGE="
