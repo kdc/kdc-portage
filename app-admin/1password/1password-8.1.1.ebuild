@@ -3,12 +3,14 @@
 
 EAPI=7
 
+MY_P="${P}.x64"
+
 DESCRIPTION="1Password command-line tool"
 HOMEPAGE="
 https://1password.com/
 https://releases.1password.com/linux/
 https://aur.archlinux.org/packages/1password/"
-SRC_URI="https://downloads.1password.com/linux/tar/stable/x86_64/1password-8.1.1.x64.tar.gz"
+SRC_URI="https://downloads.1password.com/linux/tar/stable/x86_64/${MY_P}.tar.gz"
 
 LICENSE="1password"
 SLOT="0"
@@ -19,7 +21,8 @@ RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}"
+
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	insinto /opt
