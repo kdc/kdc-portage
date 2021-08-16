@@ -17,11 +17,15 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+RESTRICT="mirror strip"
+
 S="${WORKDIR}/aws"
 
 src_install() {
 	dodir "/opt/${PN}"
 	cp -rT "${S}/dist/" "${D}/opt/${PN}/" || die "install failed!"
+	fperms 0775 "${D}/opt/${PN}/aws"
+	fperms 0775 "${D}/opt/${PN}/aws_completer"
 	dosym "${D}/opt/awscli/aws" "usr/bin/aws"
 	dosym "${D}/opt/awscli/aws_completer" "usr/bin/aws_completer"
 	mkdir -p "${D}/etc/bash_completion.d" || die
