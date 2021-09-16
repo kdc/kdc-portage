@@ -1,9 +1,7 @@
-# Copyright 1999-2020 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit bash-completion-r1
+EAPI=6
 
 COMMIT="0cbc58b"
 
@@ -12,7 +10,7 @@ HOMEPAGE="https://www.openshift.org"
 SRC_URI="https://github.com/openshift/origin/releases/download/v${PV}/openshift-origin-client-tools-v${PV}-${COMMIT}-linux-64bit.tar.gz"
 
 LICENSE="Apache-2.0"
-SLOT="0"
+SLOT="3"
 KEYWORDS="amd64"
 IUSE="cluster"
 
@@ -24,8 +22,8 @@ RESTRICT="binchecks strip"
 S="${WORKDIR}/openshift-origin-client-tools-v${PV}-${COMMIT}-linux-64bit"
 
 src_install() {
-	dobin oc
+	mv oc oc3
+	dobin oc3
 	dodoc README.md
-	"$S"/oc completion bash > "$S"/oc.completion.bash
-	newbashcomp oc.completion.bash oc
+	dodoc LICENSE
 }
