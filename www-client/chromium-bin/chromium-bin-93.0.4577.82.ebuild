@@ -10,7 +10,8 @@ CHROMIUM_LANGS="am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
 inherit chromium-2 desktop pax-utils readme.gentoo-r1 unpacker xdg-utils
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
-HOMEPAGE="https://chromium.org/"
+HOMEPAGE="https://chromium.org/
+https://github.com/stha09/gpo-stha09/tree/master/www-client/chromium-bin"
 
 MY_P=${P}-1
 
