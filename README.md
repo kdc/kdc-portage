@@ -72,7 +72,7 @@ auto-sync = Yes
 
 stha09-overlay.conf
 ```bash
-[stha09-overlay]
+[stha09]
 location = /var/db/repos/stha09-overlay
 sync-type = git
 sync-uri = https://github.com/stha09/gpo-stha09.git
