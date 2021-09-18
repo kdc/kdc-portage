@@ -68,6 +68,18 @@ priority = 50
 auto-sync = Yes
 ```
 
+### Sultan's Overlay
+
+stha09-overlay.conf
+```bash
+[stha09-overlay]
+location = /var/db/repos/stha09-overlay
+sync-type = git
+sync-uri = https://github.com/stha09/gpo-stha09.git
+auto-sync = Yes
+sync-depth = 1
+```
+
 ## SSHKey for private Repo Access
 
 ```bash
