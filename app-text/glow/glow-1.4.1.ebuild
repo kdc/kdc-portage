@@ -12,6 +12,7 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 RESTRICT="test network-sandbox"
+KEYWORDS="~amd64"
 
 DEPEND="dev-lang/go"
 RDEPEND="${DEPEND}
