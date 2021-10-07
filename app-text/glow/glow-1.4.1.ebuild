@@ -17,7 +17,6 @@ KEYWORDS="~amd64"
 DEPEND="dev-lang/go"
 RDEPEND="${DEPEND}
 	!dev-util/${PN}-bin"
-S="${WORKDIR}"
 
 src_compile() {
 	go build -v -o "${PN}" .
