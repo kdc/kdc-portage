@@ -3,7 +3,7 @@
 
 EAPI=7
 
-VTAG="2021-04-11-124433"
+VTAG="2021-10-24-061736"
 
 DESCRIPTION="The Community Distribution of Kubernetes that powers Red Hat OpenShift"
 HOMEPAGE="https://www.okd.io"
