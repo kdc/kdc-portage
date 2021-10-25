@@ -11,9 +11,7 @@ inherit distutils-r1
 DESCRIPTION="Pure-Python library to decode/read utmp and wtmp files"
 HOMEPAGE="https://codeberg.org/hjacobs/utmp/releases
 https://pypi.org/project/utmp"
-SRC_URI="https://codeberg.org/hjacobs/utmp/archive/${PV}.tar.gz"
-
-RESTRICT="mirror strip"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Apache-2.0"
@@ -24,9 +22,4 @@ RDEPEND="
 dev-python/six[${PYTHON_USEDEP}]
 dev-python/flake8[${PYTHON_USEDEP}]"
 
-S="${WORKDIR}/${PN}"
-
-python_prepare_all() {
-	sed -e "/setup_requires/ d" -i setup.py || die
-	distutils-r1_python_prepare_all
-}
+distutils_enable_tests pytest
