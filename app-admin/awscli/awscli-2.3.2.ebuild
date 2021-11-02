@@ -17,7 +17,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-RESTRICT="mirror strip"
+RESTRICT="primaryuri strip"
 
 S="${WORKDIR}/aws"
 
