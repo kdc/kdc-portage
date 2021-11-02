@@ -17,7 +17,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT="mirror"
+RESTRICT="primaryuri"
 
 RDEPEND="${PYTHON_DEPS}
 net-im/gajim

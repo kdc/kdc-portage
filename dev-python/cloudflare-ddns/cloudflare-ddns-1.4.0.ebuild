@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/ailionx/cloudflare-ddns
 https://pypi.org/project/cloudflare-ddns"
 SRC_URI="https://github.com/ailionx/cloudflare-ddns/archive/${PV}.tar.gz"
 
-RESTRICT="mirror strip"
+RESTRICT="primaryuri strip"
 
 SLOT="0"
 LICENSE="Apache-2.0"

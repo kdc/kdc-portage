@@ -16,7 +16,7 @@ DEPEND=""
 RDEPEND="${DEPEND}
 		!app-text/pandoc"
 
-RESTRICT="mirror strip"
+RESTRICT="primaryuri strip"
 
 MY_PN="${PN/-bin}"
 S="${WORKDIR}/${MY_PN}-${PV}"

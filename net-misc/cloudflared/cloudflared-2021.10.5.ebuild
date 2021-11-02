@@ -15,7 +15,7 @@ https://github.com/cloudflare/cloudflared/"
 ARCHIVE_URI="https://${EGO_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
 ${EGO_VENDOR_URI}"
 SRC_URI="${ARCHIVE_URI}"
-RESTRICT="mirror"
+RESTRICT="primaryuri"
 
 LICENSE="MIT"
 SLOT="0"
