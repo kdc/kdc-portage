@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RESTRICT="mirror strip"
+RESTRICT="primaryuri strip"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
