@@ -1,0 +1,21 @@
+#!/sbin/openrc-run
+# Copyright 2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+supervisor="supervise-daemon"
+
+name="nut_exporter daemon"
+description="Nginx Prometheus Exporter"
+command=/usr/bin/nut_exporter
+command_args="${exporter_args}"
+
+depend() {
+    need net
+    use logger
+}
+
+reload() {
+    ebegin "Reloading nut_exporter configuration"
+    ${supervisor} ${RC_SVCNAME} --signal HUP
+    eend $?
+}

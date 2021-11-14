@@ -1,0 +1,3 @@
+# /etc/conf.d/nut_exporter
+
+EXPORTER_ARGS=""
