@@ -13,6 +13,10 @@ KEYWORDS="~amd64"
 
 S="${WORKDIR}"
 
+src_unpack() {
+	cp "${DISTDIR}/${A}" "${WORKDIR}" || die "cp failed"
+}
+
 src_install() {
 	newbin "${PN}-v${PV}" "nut_exporter"
 	newconfd $FILESDIR/$PN.confd $PN
