@@ -5,16 +5,16 @@ EAPI=8
 
 DESCRIPTION="Network UPS Tools (NUT) Prometheus Exporter"
 HOMEPAGE="https://github.com/DRuggeri/nut_exporter"
-SRC_URI="https://github.com/DRuggeri/${PN}/releases/download/v${PV}/${PN}-v${PV}-linux-amd64"
+SRC_URI="https://github.com/DRuggeri/${PN}/releases/download/v${PV}/${PN}-v${PV}-linux-amd64 -> ${PN}-v${PV}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT="test"
+S="${WORKDIR}"
 
 src_install() {
-	newbin "${PN}-v${PV}-linux-amd64" "nut_exporter"
+	newbin "${PN}-v${PV}" "nut_exporter"
 	newconfd $FILESDIR/$PN.confd $PN
 	newinitd $FILESDIR/$PN.initd $PN
 }
