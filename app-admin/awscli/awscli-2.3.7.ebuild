@@ -1,7 +1,7 @@
 # Copyright 2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="Universal Command Line Interface for Amazon Web Services version 2"
 HOMEPAGE="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
