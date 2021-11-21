@@ -1,9 +1,9 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-VTAG="2021-10-24-061736"
+VTAG="2021-11-21-045123"
 
 DESCRIPTION="The Community Distribution of Kubernetes that powers Red Hat OpenShift"
 HOMEPAGE="https://www.okd.io"
@@ -24,4 +24,5 @@ src_install() {
 	dobin oc
 	use kubectl && dosym /usr/bin/oc /usr/bin/kubectl
 	dodoc README.md
+	newbashcomp "${FILESDIR}"/oc_bash_completion
 }
