@@ -26,5 +26,5 @@ src_install() {
 	dobin oc
 	use kubectl && dosym /usr/bin/oc /usr/bin/kubectl
 	dodoc README.md
-	newbashcomp "${FILESDIR}"/oc_bash_completion
+	newbashcomp "${FILESDIR}"/oc_bash_completion oc
 }
