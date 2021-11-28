@@ -80,6 +80,18 @@ auto-sync = Yes
 sync-depth = 1
 ```
 
+### torbrowser-overlay
+
+torbrowser-overlay.conf
+```bash
+[torbrowser-overlay]
+location = /var/db/repos/torbrowser-overlay
+sync-type = git
+sync-uri = https://0xacab.org/poncho/torbrowser-overlay.git
+auto-sync = Yes
+sync-depth = 1
+```
+
 ## SSHKey for private Repo Access
 
 ```bash
