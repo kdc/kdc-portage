@@ -480,6 +480,7 @@ RESTRICT="test"
 
 RDEPEND="
 	www-servers/nginx[nginx_modules_http_metrics]
+	www-servers/nginx[stub_status]
 "
 DEPEND="${RDEPEND}"
 
