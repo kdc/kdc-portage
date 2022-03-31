@@ -6,9 +6,8 @@ EAPI=7
 inherit bash-completion-r1
 
 DESCRIPTION="A fast and minimalist 3D viewer"
-HOMEPAGE="https://gitlab.kitware.com/f3d/f3d/
-https://github.com/Kitware/F3D"
-SRC_URI="https://gitlab.kitware.com/f3d/f3d/uploads/937b2b6c8a14b40538983195395b4094/f3d-${PV}-Linux.tar.xz"
+HOMEPAGE="https://github.com/f3d-app/f3d"
+SRC_URI="https://github.com/f3d-app/f3d/releases/download/v${PV}/f3d-${PV}-Linux.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
