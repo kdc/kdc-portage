@@ -20,6 +20,8 @@ S="${WORKDIR}/f3d-${PV}-Linux"
 
 src_install() {
 	dobin $S/bin/f3d
+	dolib $S/lib/libf3d.so
 	dodoc $S/share/doc/f3d/README.md
+	doman $S/man/man1/f3d.1.gz
 	newbashcomp share/bash-completion/completions/f3d f3d
 }
