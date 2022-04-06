@@ -22,6 +22,7 @@ src_install() {
 	dobin $S/bin/f3d
 	dolib.so $S/lib/libf3d.so
 	dodoc $S/share/doc/f3d/README.md
-	doman $S/man/man1/f3d.1.gz
+	unpack $S/share/man/man1/f3d.1.gz
+	doman $S/f3d.1
 	newbashcomp share/bash-completion/completions/f3d f3d
 }
