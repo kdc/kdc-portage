@@ -5,7 +5,8 @@ EAPI=7
 inherit font gnome2-utils eutils unpacker
 
 DESCRIPTION="Joplin is an open source note-taking app"
-HOMEPAGE="https://joplinapp.org"
+HOMEPAGE="https://joplinapp.org
+https://github.com/positivelab/lab-overlay/tree/master/app-office/joplin-desktop-bin"
 SRC_URI="amd64? ( https://github.com/laurent22/joplin/releases/download/v${PV}/Joplin-${PV}.AppImage )"
 
 LICENSE="MIT"
