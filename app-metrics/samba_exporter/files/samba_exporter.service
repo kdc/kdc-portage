@@ -1,0 +1,10 @@
+[Unit]
+Description=samba Exporter
+
+[Service]
+User=samba_exporter
+EnvironmentFile=/etc/sysconfig/samba_exporter
+ExecStart=/usr/bin/samba_exporter $OPTIONS
+
+[Install]
+WantedBy=multi-user.target
