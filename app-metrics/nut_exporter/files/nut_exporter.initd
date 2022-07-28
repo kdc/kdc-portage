@@ -5,7 +5,7 @@
 supervisor="supervise-daemon"
 
 name="nut_exporter daemon"
-description="Nginx Prometheus Exporter"
+description="Nut Prometheus Exporter"
 command=/usr/bin/nut_exporter
 command_args="${exporter_args}"
 
