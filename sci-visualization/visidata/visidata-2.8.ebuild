@@ -23,7 +23,8 @@ BDEPEND="test? ( dev-vcs/git
 		dev-python/h5py[${PYTHON_USEDEP}]
 		dev-python/openpyxl[${PYTHON_USEDEP}]
 		dev-python/pandas[${PYTHON_USEDEP}]
-		dev-python/requests[${PYTHON_USEDEP}] )"
+		dev-python/requests[${PYTHON_USEDEP}]
+		dev-python/openpyxl[${PYTHON_USEDEP}] )"
 
 distutils_enable_tests pytest
 
