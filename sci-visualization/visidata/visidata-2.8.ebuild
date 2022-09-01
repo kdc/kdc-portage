@@ -15,7 +15,7 @@ SRC_URI="https://github.com/saulpw/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test png postgres xlsx xls xml dta tabulate"
+IUSE="test dta pcap png mysql postgres tabulate xls xlsx xml yaml"
 
 RDEPEND="dev-python/python-dateutil[${PYTHON_USEDEP}]
 	$(python_gen_impl_dep sqlite)"
@@ -26,13 +26,17 @@ BDEPEND="test? (
 		dev-python/openpyxl[${PYTHON_USEDEP}]
 		dev-python/pandas[${PYTHON_USEDEP}]
 		dev-python/requests[${PYTHON_USEDEP}] )
-		png? ( dev-python/pypng[${PYTHON_USEDEP}] )
-		postgres? ( dev-python/psycopg[${PYTHON_USEDEP}] )
-		xlsx? ( dev-python/openpyxl[${PYTHON_USEDEP}] )
-		xls? ( dev-python/xlrd[${PYTHON_USEDEP}] )
-		xml? ( dev-python/lxml[${PYTHON_USEDEP}] )
 		dta? ( dev-python/pandas[${PYTHON_USEDEP}] )
-		tabulate? ( dev-python/tabulate[${PYTHON_USEDEP}] )"
+		pcap? ( dev-python/dnslib[${PYTHON_USEDEP}] )
+		png? ( dev-python/pypng[${PYTHON_USEDEP}] )
+		mysql? ( dev-python/mysqlclient[${PYTHON_USEDEP}] )
+		postgres? ( dev-python/psycopg[${PYTHON_USEDEP}] )
+		tabulate? ( dev-python/tabulate[${PYTHON_USEDEP}] )
+		xls? ( dev-python/xlrd[${PYTHON_USEDEP}] )
+		xlsx? ( dev-python/openpyxl[${PYTHON_USEDEP}] )
+		xml? ( dev-python/lxml[${PYTHON_USEDEP}] )
+		yaml? ( dev-python/pyyaml[${PYTHON_USEDEP}] )"
+
 
 distutils_enable_tests pytest
 
