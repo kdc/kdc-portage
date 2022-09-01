@@ -30,7 +30,7 @@ BDEPEND="test? (
 		postgres? ( dev-python/psycopg[${PYTHON_USEDEP}] )
 		xlsx? ( dev-python/openpyxl[${PYTHON_USEDEP}] )
 		xls? ( dev-python/xlrd[${PYTHON_USEDEP}] )
-		xml? ( python/lxml[${PYTHON_USEDEP}] )
+		xml? ( dev-python/lxml[${PYTHON_USEDEP}] )
 		dta? ( dev-python/pandas[${PYTHON_USEDEP}] )
 		tabulate? ( dev-python/tabulate[${PYTHON_USEDEP}] )"
 
