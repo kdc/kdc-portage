@@ -21,5 +21,6 @@ DEPEND=""
 RDEPEND="
 	${DEPEND}
 	dev-python/pyyaml[${PYTHON_USEDEP}]
+	dev-python/python-dotenv[${PYTHON_USEDEP}]
 "
 BDEPEND=""
