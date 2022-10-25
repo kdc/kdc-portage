@@ -6,7 +6,7 @@ EAPI=7
 inherit acct-user
 
 DESCRIPTION="User for the prometheus_podman_exporter prometheus plugin"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 ACCT_USER_ID=-1
 ACCT_USER_GROUPS=( prometheus_podman_exporter )
