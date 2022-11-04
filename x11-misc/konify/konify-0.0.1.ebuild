@@ -3,13 +3,13 @@
 
 EAPI=8
 
-DESCRIPTION="The world’s most-loved password manager CLI"
+DESCRIPTION="Script to generate semi-random desktop backgrounds"
 HOMEPAGE="https://xyne.dev/scripts/graphics/konify/"
 SRC_URI="https://xyne.dev/scripts/graphics/konify/konify.pl"
 
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64"
 
 RESTRICT="mirror strip test bindist"
 
