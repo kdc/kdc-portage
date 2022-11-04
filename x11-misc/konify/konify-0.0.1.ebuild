@@ -19,6 +19,10 @@ BDEPEND=""
 
 S=${WORKDIR}
 
+src_unpack() {
+	cp "${DISTDIR}/${A}" "${WORKDIR}" || die "cp failed"
+}
+
 src_install() {
-	dobin konify.pl
+	newbin "konify.pl" "konify"
 }
