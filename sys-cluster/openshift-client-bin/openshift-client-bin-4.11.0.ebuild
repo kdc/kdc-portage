@@ -5,7 +5,7 @@ EAPI=8
 
 inherit bash-completion-r1
 
-VTAG="2022-10-28-153352"
+VTAG="2022-11-05-030711"
 
 DESCRIPTION="The Community Distribution of Kubernetes that powers Red Hat OpenShift"
 HOMEPAGE="https://www.okd.io"
@@ -18,7 +18,7 @@ IUSE="kubectl"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-RESTRICT="binchecks strip"
+RESTRICT="mirror strip test bindist"
 
 S="${WORKDIR}"
 
