@@ -5,7 +5,7 @@ EAPI=8
 
 inherit bash-completion-r1
 
-VTAG="2022-11-19-050030"
+VTAG="2022-12-02-145640"
 
 DESCRIPTION="The Community Distribution of Kubernetes that powers Red Hat OpenShift"
 HOMEPAGE="https://www.okd.io"
