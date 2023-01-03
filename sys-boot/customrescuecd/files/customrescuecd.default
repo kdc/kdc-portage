@@ -1,4 +1,4 @@
-Here you can set custom bootoptions for the CustomRescueCD
+# Here you can set custom bootoptions for the CustomRescueCD
 #
 # You can add for example in a space separated list:
 #  copytoram: causes the iso file to be fully loaded into memory
