@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}/f3d-${PV}-Linux"
+S="${WORKDIR}"
 
 src_install() {
 	dobin $S/bin/f3d
