@@ -3,8 +3,9 @@
 
 EAPI=8
 
-DESCRIPTION="The world’s most-loved password manager"
+inherit rpm xdg-utils
 
+DESCRIPTION="The world’s most-loved password manager"
 HOMEPAGE="
 https://1password.com/
 https://releases.1password.com/linux/
