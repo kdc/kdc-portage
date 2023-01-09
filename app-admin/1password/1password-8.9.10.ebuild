@@ -20,7 +20,7 @@ RESTRICT="mirror strip test bindist"
 DEPEND="
 x11-misc/xdg-utils
 policykit? ( sys-auth/polkit )
-cli? ( app-misc/1password-cli )
+cli? ( app-admin/1password-cli )
 "
 RDEPEND="${DEPEND}"
 
