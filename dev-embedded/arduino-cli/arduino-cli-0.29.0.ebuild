@@ -14,9 +14,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="acct-group/apache_exporter
-	acct-user/apache_exporter"
-	RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	ego build
