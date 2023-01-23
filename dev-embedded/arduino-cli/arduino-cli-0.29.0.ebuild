@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-#inherit go-module
+
+inherit bash-completion-r1
 
 DESCRIPTION="Arduino command line tool"
 HOMEPAGE="https://arduino.github.io/arduino-cli "
 HOMEPAGE+="https://github.com/arduino/arduino-cli"
-#SRC_URI="https://github.com/arduino/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 SRC_URI="https://github.com/arduino/${PN}/releases/download/${PV}/${PN}_${PV}_Linux_64bit.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
