@@ -7,8 +7,8 @@ inherit go-module systemd
 DESCRIPTION="Arduino command line tool"
 HOMEPAGE="https://arduino.github.io/arduino-cli "
 HOMEPAGE+="https://github.com/arduino/arduino-cli"
-SRC_URI="https://github.com/Lusitaniae/apache_exporter/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI="https://github.com/arduino/${PN}/releases/download/${PV}/${PN}_${PV}_Linux_64bit.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/arduino/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+#SRC_URI="https://github.com/arduino/${PN}/releases/download/${PV}/${PN}_${PV}_Linux_64bit.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
