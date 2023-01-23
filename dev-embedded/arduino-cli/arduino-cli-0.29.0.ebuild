@@ -21,4 +21,5 @@ S=${WORKDIR}
 
 src_install() {
 	dobin ${PN}
+	newbashcomp "${FILESDIR}"/arduino-cli_bash_completion ${PN}
 }
