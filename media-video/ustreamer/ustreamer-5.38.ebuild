@@ -5,7 +5,7 @@ EAPI=8
 inherit systemd
 
 DESCRIPTION="uStreamer - Lightweight and fast MJPEG-HTTP streamer"
-HOMEPAGE="https://github.com/pikvm/ustreamer"
+HOMEPAGE="https://github.com/pikvm/ustreamer https://github.com/pikvm/ustreamer/blob/master/pkg/gentoo/ustreamer-9999.ebuild"
 SRC_URI="https://github.com/pikvm/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
