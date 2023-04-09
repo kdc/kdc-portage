@@ -7,6 +7,6 @@ inherit acct-user
 
 DESCRIPTION="User for uStreamer service"
 ACCT_USER_ID=-1
-ACCT_USER_GROUPS=( ustreamer )
+ACCT_USER_GROUPS=( ustreamer video )
 
 acct-user_add_deps
