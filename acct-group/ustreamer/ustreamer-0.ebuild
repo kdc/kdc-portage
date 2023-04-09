@@ -1,11 +1,8 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit acct-group
 DESCRIPTION="Group used for uStreamer service"
-KEYWORDS=""
-
-# If you want this to persist across multiple machines, pick a real number!
 ACCT_GROUP_ID="-1"
