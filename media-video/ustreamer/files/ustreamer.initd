@@ -1,0 +1,20 @@
+#!/sbin/openrc-run
+# Copyright 2016-2019 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+description="uStreamer service"
+pidfile=${pidfile:-"/run/${RC_SVCNAME}.pid"}
+
+command="/usr/bin/ustreamer"
+command_args="${command_args:-}"
+command_background="true"
+start_stop_daemon_args="--stdout /var/log/ustreamer/${RC_SVCNAME}.log \
+	--stderr /var/log/ustreamer/${RC_SVCNAME}.log"
+
+depend() {
+	after net
+}
+
+start_pre() {
+	checkpath -q -d -m 0755 /var/log/ustreamer
+}

@@ -1,0 +1,9 @@
+[Unit]
+Description=uStreamer service
+
+[Service]
+EnvironmentFile=/etc/sysconfig/ustreamer
+ExecStart=/usr/bin/ustreamer $OPTIONS
+
+[Install]
+WantedBy=multi-user.target
