@@ -4,11 +4,14 @@
 
 description="uStreamer service"
 pidfile=${pidfile:-"/run/${RC_SVCNAME}.pid"}
+user=${user:-${RC_SVCNAME}}
+group=${group:-${RC_SVCNAME}}
 
 command="/usr/bin/ustreamer"
 command_args="${command_args:-}"
 command_background="true"
-start_stop_daemon_args="--stdout /var/log/ustreamer/${RC_SVCNAME}.log \
+start_stop_daemon_args="--user ${user} --group ${group} \
+	--stdout /var/log/ustreamer/${RC_SVCNAME}.log \
 	--stderr /var/log/ustreamer/${RC_SVCNAME}.log"
 
 depend() {
@@ -16,5 +19,5 @@ depend() {
 }
 
 start_pre() {
-	checkpath -q -d -m 0755 /var/log/ustreamer
+	checkpath -q -d -m 0755 -o ${user}:${group} /var/log/ustreamer
 }

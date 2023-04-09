@@ -13,6 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
+	acct-group/ustreamer
+	acct-user/ustreamer
 	>=dev-libs/libevent-2.1.8
 	>=media-libs/libjpeg-turbo-1.5.3
 	>=dev-libs/libbsd-0.9.1
@@ -36,4 +38,5 @@ src_install() {
 	newins "${FILESDIR}/sysconfig.ustreamer" ustreamer
 
 	keepdir /var/log/ustreamer
+	fowners -R ${PN}:${PN} /var/log/prometheus_podman_exporter
 }

@@ -1,9 +1,15 @@
 [Unit]
 Description=uStreamer service
+Wants=network-online.target
+After=network-online.target
 
 [Service]
+User=ustreamer
 EnvironmentFile=/etc/sysconfig/ustreamer
 ExecStart=/usr/bin/ustreamer $OPTIONS
+DeviceAllow=/dev/video0
+Restart=on-abnormal
+RestartSec=20
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
