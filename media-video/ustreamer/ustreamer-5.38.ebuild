@@ -38,5 +38,5 @@ src_install() {
 	newins "${FILESDIR}/sysconfig.ustreamer" ustreamer
 
 	keepdir /var/log/ustreamer
-	fowners -R ${PN}:${PN} /var/log/prometheus_podman_exporter
+	fowners -R ${PN}:${PN} /var/log/ustreamer
 }
