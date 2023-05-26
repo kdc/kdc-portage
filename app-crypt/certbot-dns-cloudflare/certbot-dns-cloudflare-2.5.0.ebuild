@@ -19,6 +19,8 @@ fi
 DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
+RESTRICT="mirror strip test bindist"
+
 DESCRIPTION="Cloudflare DNS Authenticator plugin for Certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
