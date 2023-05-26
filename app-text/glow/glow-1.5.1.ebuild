@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="A tool to render markdown on the CLI"
 HOMEPAGE="https://github.com/charmbracelet/glow
