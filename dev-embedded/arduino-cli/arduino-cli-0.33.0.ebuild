@@ -10,6 +10,8 @@ HOMEPAGE="https://arduino.github.io/arduino-cli "
 HOMEPAGE+="https://github.com/arduino/arduino-cli"
 SRC_URI="https://github.com/arduino/${PN}/releases/download/${PV}/${PN}_${PV}_Linux_64bit.tar.gz -> ${P}.tar.gz"
 
+RESTRICT="mirror strip test bindist"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
