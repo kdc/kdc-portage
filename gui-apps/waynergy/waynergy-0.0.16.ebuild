@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit meson
+
 DESCRIPTION="An implementation of a synergy client for wayland compositors."
 HOMEPAGE="https://github.com/r-c-f/waynergy"
 
@@ -15,7 +17,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="
