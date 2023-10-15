@@ -29,10 +29,10 @@ sync-openpgp-key-refresh-retry-delay-mult = 4
 ```
 ### Personal overlay
 
-kdc-overlay.conf
+kdc.conf
 ```bash
-[kdc-overlay]
-location = /var/db/repos/kdc-overlay
+[kdc]
+location = /var/db/repos/kdc
 sync-type = git
 sync-uri = https://github.com/kdc/kdc-portage.git
 auto-sync = Yes
@@ -41,7 +41,7 @@ sync-depth = 1
 
 ### Pentoo Linux's Security overlay
 
-pentoo-overlay.conf
+pentoo.conf
 ```bash
 [pentoo]
 location = /var/db/repos/pentoo
@@ -53,39 +53,27 @@ sync-depth = 1
 
 ### Gentoo's Steam overlay
 
-steam-overlay.conf
+steam.conf
 ```bash
-[steam-overlay]
+[steam]
 
 # Gentoo overlay for Valve's Steam client and Steam-based games.
 # Maintainer: anyc (https://github.com/anyc)
 # https://raw.githubusercontent.com/anyc/steam-overlay/master/steam-overlay.conf
 
-location = /usr/local/portage/steam-overlay
+location = /usr/local/portage/steam
 sync-type = git
 sync-uri = https://github.com/anyc/steam-overlay.git
 priority = 50
 auto-sync = Yes
 ```
 
-### Sultan's Overlay
-
-stha09-overlay.conf
-```bash
-[stha09]
-location = /var/db/repos/stha09-overlay
-sync-type = git
-sync-uri = https://github.com/stha09/gpo-stha09.git
-auto-sync = Yes
-sync-depth = 1
-```
-
 ### torbrowser-overlay
 
-torbrowser-overlay.conf
+torbrowser.conf
 ```bash
-[torbrowser-overlay]
-location = /var/db/repos/torbrowser-overlay
+[torbrowser]
+location = /var/db/repos/torbrowser
 sync-type = git
 sync-uri = https://0xacab.org/poncho/torbrowser-overlay.git
 auto-sync = Yes
