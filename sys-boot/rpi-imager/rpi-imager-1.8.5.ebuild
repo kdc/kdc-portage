@@ -20,7 +20,12 @@ fi
 RESTRICT="mirror"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="debug"
+IUSE="debug udisks gnutls"
+
+BDEPEND="
+	dev-build/cmake
+	sys-devel/gcc
+"
 
 RDEPEND="
 	app-arch/libarchive
@@ -33,9 +38,12 @@ RDEPEND="
 	dev-qt/qtxml:5
 	dev-qt/qtsvg:5
 	net-misc/curl
-	net-libs/gnutls
-	sys-fs/udisks:2
-	dev-build/cmake
+	virtual/pkgconfig
+	x11-libs/libdrm
+	sys-libs/zlib
+	sys-apps/util-linux
+	gnutls? ( net-libs/gnutls )
+	udisks? ( sys-fs/udisks:2 )
 "
 DEPEND="
 	${RDEPEND}
