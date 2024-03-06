@@ -22,6 +22,7 @@ RDEPEND="dev-python/python-dateutil[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}"
 BDEPEND="test? (
 		dev-vcs/git
+		dev-python/importlib-metadata[${PYTHON_USEDEP}]
 		dev-python/h5py[${PYTHON_USEDEP}]
 		dev-python/openpyxl[${PYTHON_USEDEP}]
 		dev-python/pandas[${PYTHON_USEDEP}]
@@ -60,12 +61,12 @@ pkg_postinst() {
 	optfeature "integration with shapefiles" sci-libs/pyshp
 	optfeature "integration with namestand" dev-python/graphviz
 	optfeature "integration with tabulate/wcwidth" dev-python/tabulate # saver
-	#optfeature "integration with pcap" dev-python/dnslib #dpkt
-	#optfeature "integration with pdf" pdfminer.six tabula
-	#optfeature "integration with mbtiles" mapbox-vector-tile
-	#optfeature "integration with xpt (SAS)" xport
-	#optfeature "integration with sas7bdat (SAS)" sas7bdat
-	#optfeature "integration with sav (SPSS)" savReaderWriter
-	#optfeature "integration with datapackage" frictionless .json
-	#optfeature "integration with vcf" vobject
+	optfeature "integration with pcap" dev-python/dnslib #dpkt
+	optfeature "integration with pdf" pdfminer.six tabula
+	optfeature "integration with mbtiles" mapbox-vector-tile
+	optfeature "integration with xpt (SAS)" xport
+	optfeature "integration with sas7bdat (SAS)" sas7bdat
+	optfeature "integration with sav (SPSS)" savReaderWriter
+	optfeature "integration with datapackage" frictionless .json
+	optfeature "integration with vcf" vobject
 }
