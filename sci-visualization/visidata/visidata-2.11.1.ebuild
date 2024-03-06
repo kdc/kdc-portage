@@ -18,11 +18,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test dta pcap png mysql postgres tabulate xls xlsx xml yaml"
 
 RDEPEND="dev-python/python-dateutil[${PYTHON_USEDEP}]
-	$(python_gen_impl_dep sqlite)"
+		dev-python/importlib-metadata[${PYTHON_USEDEP}]
+		$(python_gen_impl_dep sqlite)"
 DEPEND="${RDEPEND}"
 BDEPEND="test? (
 		dev-vcs/git
-		dev-python/importlib-metadata[${PYTHON_USEDEP}]
 		dev-python/h5py[${PYTHON_USEDEP}]
 		dev-python/openpyxl[${PYTHON_USEDEP}]
 		dev-python/pandas[${PYTHON_USEDEP}]
