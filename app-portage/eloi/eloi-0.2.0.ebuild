@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND="dev-go/go"
+BDEPEND="dev-lang/go"
 
 src_unpack() {
 	git-r3_src_unpack
