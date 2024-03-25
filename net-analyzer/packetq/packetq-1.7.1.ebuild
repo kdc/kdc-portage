@@ -21,19 +21,11 @@ DEPEND="
 	maxmind? ( dev-libs/libmaxminddb )"
 RDEPEND="${DEPEND}"
 BDEPEND=""
-S="${WORKDIR}"
+S="${WORKDIR}/PacketQ-${PV}"
 
 src_prepare() {
 	default
 	eautoreconf
-}
-
-src_configure() {
-	econf
-}
-
-src_compile() {
-	emake
 }
 
 src_install() {
