@@ -15,9 +15,9 @@ KEYWORDS="~amd64"
 DEPEND="
 	acct-group/ustreamer
 	acct-user/ustreamer
-	>=dev-libs/libevent-2.1.8
-	>=media-libs/libjpeg-turbo-1.5.3
-	>=dev-libs/libbsd-0.9.1
+	dev-libs/libevent
+	media-libs/libjpeg-turbo
+	dev-libs/libbsd
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
