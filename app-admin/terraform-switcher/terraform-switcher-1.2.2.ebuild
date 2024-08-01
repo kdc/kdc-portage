@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="A command line tool to switch between different versions of terraform"
 HOMEPAGE="https://github.com/warrensbox/terraform-switcher
 https://tfswitch.warrensbox.com/"
-SRC_URI="https://github.com/warrensbox/${PN}/releases/download/${PV}/${PN}_${PV}_linux_amd64.tar.gz"
+SRC_URI="https://github.com/warrensbox/${PN}/releases/download/v${PV}/${PN}_v${PV}_linux_amd64.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
