@@ -1,0 +1,13 @@
+[Unit]
+Description=DNS sniffer
+After=network.target
+
+[Service]
+Type=forking
+User=passivedns
+Group=passivedns
+ExecStart=/usr/bin/passivedns -D -f csCQTAtn -X 4CDNPRSxs
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
