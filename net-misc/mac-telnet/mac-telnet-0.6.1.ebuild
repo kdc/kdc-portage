@@ -2,10 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=7
-
-inherit eutils multilib toolchain-funcs
-
+EAPI=8
 
 DESCRIPTION="MAC Telnettool to search for Mikrotik via MACADDRESS"
 HOMEPAGE="https://github.com/haakonnessjoen/MAC-Telnet"
