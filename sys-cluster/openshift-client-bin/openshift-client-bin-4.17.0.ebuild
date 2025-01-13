@@ -5,11 +5,11 @@ EAPI=8
 
 inherit bash-completion-r1
 
-VTAG="2024-03-10-010116"
+VTAG="scos.0"
 
 DESCRIPTION="The Community Distribution of Kubernetes that powers Red Hat OpenShift"
 HOMEPAGE="https://www.okd.io"
-SRC_URI="https://github.com/openshift/okd/releases/download/${PV}-0.okd-${VTAG}/openshift-client-linux-${PV}-0.okd-${VTAG}.tar.gz"
+SRC_URI="https://github.com/okd-project/okd/releases/download/${PV}-okd-${VTAG}/openshift-client-linux-${PV}-okd-${VTAG}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="4"
 KEYWORDS="amd64"
